@@ -1,0 +1,110 @@
+[ 
+    { 
+        "name": "Красный гибискус", 
+        "available": true, 
+        "image": "img/candles/img1.jpg", 
+        "description": "Белая свеча, 9 см." 
+    }, 
+    { 
+        "name": "Сакура", 
+        "available": true, 
+        "image": "img/candles/img2.jpg", 
+        "description": "Белая свеча, 9 см." 
+    }, 
+    { 
+        "name": "Красный мак", 
+        "available": true, 
+        "image": "img/candles/img3.jpg", 
+        "description": "Белая свеча, 9 см." 
+    }, 
+    { 
+        "name": "Сирень", 
+        "available": true, 
+        "image": "img/candles/img4.jpg", 
+        "description": "Белая свеча, 9 см." 
+    }, 
+    { 
+        "name": "Крокус", 
+        "available": true, 
+        "image": "img/candles/img5.jpg", 
+        "description": "Белая свеча, 9 см." 
+    }, 
+    { 
+        "name": "Черный гиьискус", 
+        "available": true, 
+        "image": "img/candles/img6.jpg", 
+        "description": "Красная свеча, 9 см." 
+    }, 
+    { 
+        "name": "Колокольчик", 
+        "available": true, 
+        "image": "img/candles/img7.jpg", 
+        "description": "Белая свеча, 9 см." 
+    },
+    {
+        "name": "Одуванчик",
+        "available":true,
+        "image":"img/candles/img8.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name": "Гиацинт",
+        "available":true,
+        "image":"img/candles/img9.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name":"Гвоздика",
+        "available":true,
+        "image":"img/candles/img10.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name":"Подснежник",
+        "available":true,
+        "image":"img/candles/img11.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name":"Пасхальная свеча",
+        "available":true,
+        "image":"img/candles/img12.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name":"Мимоза",
+        "available":true,
+        "image":"img/candles/img13.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name":"Тюльпаны",
+        "available":true,
+        "image":"img/candles/img14.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name":"Нарцисс",
+        "available":true,
+        "image":"img/candles/img15.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name":"Мак",
+        "available":true,
+        "image":"img/candles/img16.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name":"Рождественская свеча",
+        "available":true,
+        "image":"img/candles/img17.jpg",
+        "description":"Белая свеча, 9 см."
+    },
+    {
+        "name":"Кит",
+        "available":true,
+        "image":"img/candles/img18.jpg",
+        "description":"Черная свеча, 11 см"    
+    }
+]

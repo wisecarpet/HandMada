@@ -1,0 +1,356 @@
+ body {
+      margin: 0;
+      font-family: 'Marck Script', cursive;
+      background-color: #fff8f2;
+      color: #3d2b1f;
+      align-items: center;
+    }
+
+    /*logotype*/
+
+   .logotype {
+    margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+ /* или фиксированная ширина */
+}
+
+.logo_image {
+  display: block;
+  border-radius: 20px;
+  width: 350px;
+}
+
+.logotype h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none; /* чтобы текст не мешал кликам */
+}
+
+.logotype p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+    /*sections*/
+    .cakes {
+      padding-top: 10rem;
+      padding: 2 rem;
+      text-align: center;
+    }
+
+    .candles {
+      padding-top: 20rem;
+      text-align: center;
+    }
+
+    /*image carouse design*/
+
+    #candlesContainer,
+    #cakesContainer {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 30px;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    #candlesContainer::-webkit-scrollbar,
+    #cakesContainer::-webkit-scrollbar {
+      display: none;
+    }
+
+    
+    /*galleries*/
+    
+    .candles-slides, .cakes-slides {
+      width: 90%;
+      align-items: center;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 1rem;
+      justify-content: flex-start;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      border-top: 2px solid #3d2b1f;
+      border-bottom: 2px solid #3d2b1f;
+    }
+
+    /*hover effect any of the candles*/
+
+    .candles-slides:hover .candles-slides-item,
+    .cakes-slides:hover .cakes-slides-item {
+      filter: blur(2px);
+      transform: scale(1);
+      transition: 0.3s ease;
+    }
+
+    /*pointed candle is clear and enlarged*/
+
+    .candles-slides .candles-slides-item:hover,
+    .cakes-slides .cakes-slides-item:hover {
+      filter: blur(0);
+      transform: scale(1.1);
+      z-index: 5;
+    }
+
+    /*cards*/
+
+    .candles-slides-item, .cakes-slides-item {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      flex: 0 0 auto;
+      margin: 0;
+      max-width: 250px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    /*pictures*/
+
+    .candles-slides-item img, .cakes-slides-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /*example with img comments*/
+
+    figure {
+      margin: 0;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: #667;
+      margin-top: 0.5 rem;
+      text-align: center;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1590080876273-4cacc45b97ab'); /* можешь заменить на мандарины */
+      background-size: cover;
+      background-position: center;
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    /*order-buttons*/
+
+    .order-btn, .order-btn2 {
+      position: relative;
+      margin: 10px 8px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Marck Script', cursive;
+      background-color: #ffcc88;
+      color: #3c2f2f;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease; 
+      align-items: center;
+    }
+
+    /*form design*/
+    /* form to flex-container*/
+    #candleOrderForm,
+    #cakeOrderForm {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      border-radius: 10px;
+      padding: 8px;
+      width: 300px;
+      margin: 20px auto;
+      gap: 10px;
+      text-align: center;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    /*drop-down list of input fields*/
+    #candleOrderForm input, #cakeOrderForm input,
+    #candleOrderForm select {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #3c2f2f;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /*style for submit button*/
+
+    #candleOrderForm input[type="submit"],
+    #cakeOrderForm input[type="submit"] {
+      background-color: #ffcc88;
+      cursor: pointer;
+      border: none;
+      margin-top: 10px;
+      font-family: 'Marck Script', cursive;
+    }
+    #candleOrderForm input[type="submit"]:hover,
+    #cakeOrderForm input[type="submit"]:hover {
+      background-color: #ffa889;
+    }
+
+    /*order field*/
+
+    .order{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .order-btn:hover,
+    .order-btn2:hover {
+      background-color: #ffa889;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #000;
+    }
+  .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    dialog {
+      border: none;
+      border-radius: 12px;
+      padding: 20px 30px;
+      background-color: #fff8f0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      font-family: 'Marck Script', cursive;
+      font-size: 1.1rem;
+      color: #3c2f2f;
+      text-align: center;
+    }
+
+    dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    dialog button {
+      margin: 10px 8px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffcfba;
+      color: #3c2f2f;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    dialog button:hover {
+      background-color: #ffa889;
+    }
+
+    .hero button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 18px;
+      background-color: #ffcc88;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Marck Script', cursive;
+      transition: background-color 0.3s;
+ }
+
+    .hero button:hover {
+      background-color: #ffb066;
+    }
+
+    .about h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .about h4 {
+      font-size: 22px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+     .about h5 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    candle-texts, cakes-texts {
+      font-size: 10px;
+    }
+
+    .card {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: left;
+      border: 1px thin #3d2b1f;
+    }
+    cakes-list, candles-list {
+      font-size: 10px;
+      margin-bottom: 8px;
+    }
+    cakes-resume, candles-resume {
+      font-size: 10px;
+      margin-bottom: 8px;
+    }
+
+    #footer {
+      display: flex;
+      width: 90vw;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 190px;
+      padding: 40px;
+      padding-left: 100px;
+      padding-right: 100px;
+      border-top: 2px solid #3d2b1f;
+      border-bottom: 2px solid #3d2b1f;
+      margin-bottom: 40px;
+      margin-top: 200px;
+    }
+    #for_contact {
+      display: flex;
+      gap: 15px;
+    }
+
+    .sosial-links {
+      text-decoration: none;
+      color: #3c2f2f;
+      padding: 8px 16px;
+    }
+
+    .sosial-links:hover {
+      color: #3d2b1f;
+      transform: translateY(-3px);
+    }
+
+    .about h2 {
+      text-align: center;
+    }
