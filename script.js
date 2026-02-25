@@ -84,6 +84,8 @@ fetch('candles_information.json')
     .then(response => response.json())
     .then(data => {
         document.getElementById('candles-title').textContent = data.title;
+        document.getElementById('candles-description').textContent = data.description;
+        document.getElementById('candles-subtitle1').textContent = data.subtitle1;
 
         const textContainer = document.getElementById('candles-texts');
         data.texts.forEach(p => {
@@ -91,7 +93,7 @@ fetch('candles_information.json')
             paragraph.textContent = p;
             textContainer.appendChild(paragraph);   
         });
-        document.getElementById('candles-subtitle').textContent = data.subtitle;
+        document.getElementById('candles-subtitle2').textContent = data.subtitle2;
         document.getElementById('candles-list-title').textContent = data.list.title;
 
         const listContainer = document.getElementById('candles-list');
@@ -109,6 +111,8 @@ fetch('cakes_information.json')
     .then(response => response.json())
     .then(data => {
         document.getElementById('cakes-title').textContent = data.title;
+        document.getElementById('cakes-description').textContent = data.description;
+        document.getElementById('cakes-subtitle1').textContent = data.subtitle1;
 
         const textContainer = document.getElementById('cakes-texts');
         data.texts.forEach(p => {
@@ -116,7 +120,7 @@ fetch('cakes_information.json')
             paragraph.textContent = p;
             textContainer.appendChild(paragraph);   
         });
-        document.getElementById('cakes-subtitle').textContent = data.subtitle;
+        document.getElementById('cakes-subtitle2').textContent = data.subtitle2;
         document.getElementById('cakes-list-title').textContent = data.list.title;
 
         const listContainer = document.getElementById('cakes-list');
