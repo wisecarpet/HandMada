@@ -1,8 +1,3 @@
-* {
-  outline: 1px solid rgba(255,0,0,0.2);
-}
-
-
 html {
   font-size: 10px;
   word-wrap: break-word;
@@ -320,7 +315,7 @@ dialog button:hover {
       overflow-wrap: break-word;
     }
  #cakes-list, #candles-list {
-      font-size: 1.6remrem;
+      font-size: 1.6rem;
       margin-bottom: 0.8rem;
     }
     #cakes-resume, #candles-resume {
@@ -333,8 +328,10 @@ dialog button:hover {
       #footer{
         flex-direction: column;
         gap: 2rem;
-        
-        width: 100%;
+        padding: 2rem;
+        margin-top: 8rem;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
       }
     }
 #footer {
