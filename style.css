@@ -342,10 +342,10 @@ dialog button:hover {
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 19rem;
+      gap: 5rem;
       padding: 4rem;
-      padding-left: 10rem;
-      padding-right: 10rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
       margin-bottom: 4rem;
       margin-top: 20rem;
       word-wrap: break-word;
@@ -362,4 +362,7 @@ dialog button:hover {
 }
  .for_contact {
      max-width: 100%;
+    }
+    .for_contact h4 {
+    text-align: left;
     }
