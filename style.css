@@ -1,5 +1,7 @@
 html {
   font-size: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 } 
  
 a {
@@ -369,6 +371,8 @@ a:hover {
       border-bottom: 2px solid #3d2b1f;
       margin-bottom: 4rem;
       margin-top: 20rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     #for_contact {
       display: flex;
@@ -393,3 +397,4 @@ a:hover {
     #about_us {
       font-size: 1.6rem;
     }
+    
