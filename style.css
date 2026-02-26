@@ -1,29 +1,95 @@
+* {
+  outline: 1px solid rgba(255,0,0,0.2);
+}
+
+
 html {
   font-size: 10px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-} 
- 
+  max-width: 100%;
+}
+
 a {
   color: #3d2b1f;
 }
 
-a:hover {
-  color: #3c2f2f;
-      transform: translateY(-3px);
+a:hover{
+  transform:translateY(-3px); 
 }
- body {
-      margin: 0;
+
+body {
+  margin: 0;
+      max-width: 100%;
       font-family: 'Marck Script', cursive;
       background-color: #fff8f2;
       color: #3d2b1f;
       align-items: center;
+}
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1590080876273-4cacc45b97ab'); /* можешь заменить на мандарины */
+      background-size: cover;
+      max-width: 100%;
+      background-position: center;
+      padding: 3rem 2rem;
+      text-align: center;
+      align-items: center;
+      color: white;
+}
+
+.hero p {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      text-shadow: 1px 1px 4px #000;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      pointer-events: none;
+      max-width: 100%;
     }
 
-    /*logotype*/
+h1 {
+  font-size: 3.6rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px #000;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none; /* чтобы текст не мешал кликам */
+}
 
-   .logotype {
-    margin: 0 auto;
+h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #3d2b1f;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #3d2b1f;
+}
+
+h4 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #3d2b1f;
+}
+
+h5 {
+  font-size: 2rem;
+  text-align: center;
+  color: #3d2b1f;
+}
+
+.logotype {
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -39,27 +105,76 @@ a:hover {
   width: 35rem;
 }
 
-.logotype h1 {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  pointer-events: none; /* чтобы текст не мешал кликам */
-}
+/*buttons on hero, buttons into dialog*/
+.hero button {
+      padding: 1.5rem 3rem;
+      margin: 1rem;
+      font-size: 1.8rem;
+      color: #3d2b1f;
+      background-color: #ffcc88;
+      border: none;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      font-family: 'Marck Script', cursive;
+      transition: background-color 0.3s;
+ }
 
-.logotype p {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  pointer-events: none;
-}
+/*hover effect in hero buttons*/
+.hero button:hover {
+      background-color: #ffb066;
+    }
 
-    /*sections*/
-    .cakes {
+
+/*style of dialog place*/
+dialog {
+      border: none;
+      border-radius: 1.2rem;
+      padding: 2rem 3rem;
+      background-color: #fff8f0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      font-family: 'Marck Script', cursive;
+      font-size: 1.1rem;
+      color: #3c2f2f;
+      text-align: center;
+    }
+
+/*visual effect for dialog opening*/
+dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    /*style of dialog buttons*/
+dialog button {
+      margin: 1rem 0.8rem;
+      padding: 1rem 1.6rem;
+      border: none;
+      border-radius: 0.8rem;
+      background-color: #ffcfba;
+      color: #3c2f2f;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+/*hover effect into dialog*/
+dialog button:hover {
+      background-color: #ffa889;
+    }
+
+/*sections*/
+/*titles of sections*/
+.candles {
+      padding-top: 20rem;
+      max-width: 100%;
+      text-align: center;
+      font-size: 1.6rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+.cakes {
       padding-top: 10rem;
+      max-width: 100%;
       padding: 2rem;
       text-align: center;
       font-size: 1.6rem;
@@ -67,19 +182,11 @@ a:hover {
       overflow-wrap: break-word;
     }
 
-    .candles {
-      padding-top: 20rem;
-      text-align: center;
-      font-size: 1.6rem;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-
-    /*image carouse design*/
-
-    #candlesContainer,
-    #cakesContainer {
+/*style of place for photos of candles and cakes*/
+#candlesContainer,
+#cakesContainer {
       display: flex;
+      max-width: 100%;
       flex-wrap: nowrap;
       overflow-x: auto;
       gap: 2rem;
@@ -88,16 +195,15 @@ a:hover {
       scrollbar-width: none;
     }
 
-    #candlesContainer::-webkit-scrollbar,
-    #cakesContainer::-webkit-scrollbar {
+/*hidden scrollbar of galeries*/
+#candlesContainer::-webkit-scrollbar,
+#cakesContainer::-webkit-scrollbar {
       display: none;
     }
 
-    
-    /*galleries*/
-    
-    .candles-slides, .cakes-slides {
-      width: 90%;
+/**/
+.candles-slides, .cakes-slides {
+      width: 100%;
       align-items: center;
       display: flex;
       flex-wrap: nowrap;
@@ -110,17 +216,18 @@ a:hover {
       border-top: 2px solid #3d2b1f;
       border-bottom: 2px solid #3d2b1f;
     }
+/**/
 
-    /*hover effect any of the candles*/
+/*hover effect any of the candles*/
 
-    .candles-slides:hover .candles-slides-item,
-    .cakes-slides:hover .cakes-slides-item {
+  .candles-slides:hover .candles-slides-item,
+  .cakes-slides:hover .cakes-slides-item {
       filter: blur(2px);
       transform: scale(1);
       transition: 0.3s ease;
     }
 
-    /*pointed candle is clear and enlarged*/
+/*pointed candle is clear and enlarged*/
 
     .candles-slides .candles-slides-item:hover,
     .cakes-slides .cakes-slides-item:hover {
@@ -128,9 +235,7 @@ a:hover {
       transform: scale(1.1);
       z-index: 5;
     }
-
-    /*cards*/
-
+/*cards*/
     .candles-slides-item, .cakes-slides-item {
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -140,8 +245,7 @@ a:hover {
       position: relative;
       transition: transform 0.3s ease;
     }
-
-    /*pictures*/
+/*pictures*/
 
     .candles-slides-item img, .cakes-slides-item img {
       width: 100%;
@@ -150,8 +254,7 @@ a:hover {
       border-radius: 1.2rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    /*example with img comments*/
+/*example with img comments*/
 
     figure {
       margin: 0;
@@ -163,16 +266,7 @@ a:hover {
       margin-top: 0.5rem;
       text-align: center;
     }
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1590080876273-4cacc45b97ab'); /* можешь заменить на мандарины */
-      background-size: cover;
-      background-position: center;
-      padding: 8rem 2rem;
-      text-align: center;
-      color: white;
-    }
-
-    /*order-buttons*/
+/*order-buttons*/
 
     .order-btn, .order-btn2 {
       position: relative;
@@ -189,54 +283,10 @@ a:hover {
       transition: background-color 0.3s ease; 
       align-items: center;
     }
-
-    /*form design*/
-    /* form to flex-container*/
-    #candleOrderForm,
-    #cakeOrderForm {
-      display: flex;
-      font-size: 1.6rem;
-      color: #3d2b1f;
-      flex-direction: column;
-      border: none;
-      border-radius: 1rem;
-      padding: 0.8rem;
-      width: 30rem;
-      margin: 2rem auto;
-      gap: 1rem;
-      text-align: center;
-      box-shadow: 0px 8px 1.6rem 0px rgba(0,0,0,0.2);
-    }
-
-    /*drop-down list of input fields*/
-    #candleOrderForm input, #cakeOrderForm input,
-    #candleOrderForm select {
-      padding: 0.8rem;
-      border-radius: 0.5rem;
-      border: 1px solid #3c2f2f;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    /*style for submit button*/
-
-    #candleOrderForm input[type="submit"],
-    #cakeOrderForm input[type="submit"] {
-      background-color: #ffcc88;
-      font-size: 1.6rem;
-      cursor: pointer;
-      border: none;
-      margin-top: 1rem;
-      font-family: 'Marck Script', cursive;
-    }
-    #candleOrderForm input[type="submit"]:hover,
-    #cakeOrderForm input[type="submit"]:hover {
-      background-color: #ffa889;
-    }
-
-    /*order field*/
+/*order field*/
 
     .order{
+      max-width: 100%;
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -249,103 +299,25 @@ a:hover {
       background-color: #ffa889;
     }
 
-    .hero h1 {
-      font-size: 3.6rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 5px #000;
-    }
-  .hero p {
-      font-size: 1.8rem;
-      margin-bottom: 3rem;
-      text-shadow: 1px 1px 4px #000;
-    }
-
-    dialog {
-      border: none;
-      border-radius: 1.2rem;
-      padding: 2rem 3rem;
-      background-color: #fff8f0;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      font-family: 'Marck Script', cursive;
-      font-size: 1.1rem;
-      color: #3c2f2f;
-      text-align: center;
-    }
-
-    dialog::backdrop {
-      background-color: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(4px);
-    }
-
-    dialog button {
-      margin: 1rem 0.8rem;
-      padding: 1rem 1.6rem;
-      border: none;
-      border-radius: 0.8rem;
-      background-color: #ffcfba;
-      color: #3c2f2f;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    dialog button:hover {
-      background-color: #ffa889;
-    }
-
-    .hero button {
-      padding: 1.5rem 3rem;
-      margin: 1rem;
-      font-size: 1.8rem;
-      color: #3d2b1f;
-      background-color: #ffcc88;
-      border: none;
-      border-radius: 0.8rem;
-      cursor: pointer;
-      font-family: 'Marck Script', cursive;
-      transition: background-color 0.3s;
- }
-
-    .hero button:hover {
-      background-color: #ffb066;
-    }
-
-    .about h3 {
-      font-size: 2.4rem;
-      margin-bottom: 0.8rem;
-    }
-    .about h4 {
-      font-size: 2.2rem;
-      margin-bottom: 0.8rem;
-      text-align: center;
-    }
-     .about h5 {
-      font-size: 2rem;
-      margin-bottom: 0.8rem;
-      text-align: center;
-    }
-
-    candle-texts, cakes-texts {
-      font-size: 1rem;
-    }
-
-    .card {
+.about p{
+  font-size: 1.6rem;
+}
+.card {
       max-width: 70rem;
       margin: 0 auto;
       padding: 2rem;
       text-align: left;
       border: 1px thin #3d2b1f;
     }
-    cakes-list, candles-list {
+ #cakes-list, #candles-list {
       font-size: 1.6remrem;
       margin-bottom: 0.8rem;
     }
-    cakes-resume, candles-resume {
+    #cakes-resume, #candles-resume {
       font-size: 1.6rem;
       margin-bottom: 0.8rem;
     }
-
-    /*mobile phone adaptation*/
+ /*mobile phone adaptation*/
 
     @media (max-width: 600px) {
       #footer{
@@ -355,10 +327,10 @@ a:hover {
         width: 100%;
       }
     }
-
-    #footer {
+#footer {
       display: flex;
-      width: 90vw;
+      max-width: 100%;
+      width: 100%;
       font-size: 1.6rem;
       flex-direction: row;
       align-items: center;
@@ -367,34 +339,18 @@ a:hover {
       padding: 4rem;
       padding-left: 10rem;
       padding-right: 10rem;
-      border-top: 2px solid #3d2b1f;
-      border-bottom: 2px solid #3d2b1f;
       margin-bottom: 4rem;
       margin-top: 20rem;
       word-wrap: break-word;
       overflow-wrap: break-word;
     }
-    #for_contact {
-      display: flex;
-      gap: 1.5rem;
-    }
 
-    .sosial-links {
-      text-decoration: none;
-      color: #3c2f2f;
-      padding: 0.8rem 1.6rem;
-    }
 
-    .sosial-links:hover {
-      color: #3d2b1f;
-      transform: translateY(-3px);
+#footer {
+    border-top: 2px solid #3d2b1f;
+    border-bottom: 2px solid #3d2b1f;
+    width: 100%;
+}
+ #for_contact {
+     max-width: 90%;
     }
-
-    .about h2 {
-      text-align: center;
-    }
-
-    #about_us {
-      font-size: 1.6rem;
-    }
-    
