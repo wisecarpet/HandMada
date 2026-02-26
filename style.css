@@ -324,16 +324,7 @@ dialog button:hover {
     }
  /*mobile phone adaptation*/
 
-    @media (max-width: 600px) {
-      #footer{
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2rem;
-        margin-top: 8rem;
-        box-sizing: border-box;
-        overflow-wrap: anywhere;
-      }
-    }
+  
 #footer {
       display: flex;
       max-width: 100%;
