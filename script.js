@@ -276,3 +276,16 @@ function toggleForm(formId, buttonId) {
         form.style.display = 'none';
     }
 }
+
+//debug: //
+window.addEventListener('load', () => {
+    const vw = document.documentElement.clientWidth;
+    const all = document.querySelectorAll('body *');
+    all.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.width > vw+1) {
+            el-style.outline ;'3px solid magenta';
+            console.log('overflow:', el, r.width, 'vw:', vw);
+        }
+    });
+});

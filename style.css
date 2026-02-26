@@ -324,10 +324,20 @@ dialog button:hover {
     }
  /*mobile phone adaptation*/
 
-  
+    @media (max-width: 600px) {
+      #footer{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+        margin-top: 8rem;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+      }
+    }
 #footer {
       display: flex;
       max-width: 100%;
+      min-width: 0;
       width: 100%;
       font-size: 1.6rem;
       flex-direction: row;
@@ -340,7 +350,7 @@ dialog button:hover {
       margin-bottom: 4rem;
       margin-top: 20rem;
       word-wrap: break-word;
-      overflow-wrap: break-word;
+      overflow-wrap: anywhere;
       border-top: 2px solid #3d2b1f;
       border-bottom: 2px solid #3d2b1f;
     }
