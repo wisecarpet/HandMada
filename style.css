@@ -187,6 +187,8 @@ dialog button:hover {
       display: flex;
       max-width: 100%;
       flex-wrap: nowrap;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
       overflow-x: auto;
       gap: 2rem;
       scroll-behavior: smooth;

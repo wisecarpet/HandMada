@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" content="width=device-width">
-<title>HandMada: Cakes&Candles💝</title>
- <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" content="width=device-width">
+  <title>HandMada: Cakes&Candles💝</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,126 +13,126 @@
     <div class="logotype">
        <img class="logo_image" src="icons/logo3.JPG">
           <div class="logo-texts">
-          <h1 id="logo-title"></h1>
-          <p id="logo-text"></p>
+            <h1 id="logo-title"></h1>
+            <p id="logo-text"></p>
           </div>
     </div>
     
     <button id="openCakeDialog">Хочу торт</button>
     <button id="openCandleDialog">Хочу свечу</button>
 
-   <dialog id="cakeDialog">
-    <button onclick="doCakeOrder()" id="cake-Order">Заказать торт💌</button>
-    <button onclick="moreForCakes()" id="cake-Information">Узнать больше💁‍♀️</button>
-    <button class="closeDialog">✗</button>
-   </dialog>
-   <dialog id="candleDialog">
-    <button onclick="doCandleOrder()" id="candle-Order">Заказать свечу💌</button>
-    <button onclick="moreForCandles()" id="candle-Information">Узнать больше💁‍♀️</button>
-    <button class="closeDialog">✗</button>
-   </dialog>
+      <dialog id="cakeDialog">
+        <button onclick="doCakeOrder()" id="cake-Order">Заказать торт💌</button>
+        <button onclick="moreForCakes()" id="cake-Information">Узнать больше💁‍♀️</button>
+        <button class="closeDialog">✗</button>
+      </dialog>
+      <dialog id="candleDialog">
+        <button onclick="doCandleOrder()" id="candle-Order">Заказать свечу💌</button>
+        <button onclick="moreForCandles()" id="candle-Information">Узнать больше💁‍♀️</button>
+        <button class="closeDialog">✗</button>
+      </dialog>
   </div>
  
   <div class="candles">
-     <section id="candlesInfo">
-       <div id="aboutCandles" class="about">
-    <h2 id="candles-title"></h2>
-    <h3 id="candles-description"></h3>
-      <h3 id="candles-subtitle1"></h3>
-      <div class="card">
-      <div id="candles-texts"></div>
-      <h4 id="candles-subtitle2"></h4>
-      <h5 id="candles-list-title"></h5>
-      <ul id="candles-list"></ul>
-      <p id="candles-resume"></p>
-    </div>
-    </div>
+    <section id="candlesInfo">
+      <div id="aboutCandles" class="about">
+        <h2 id="candles-title"></h2>
+        <h3 id="candles-description"></h3>
+        <h3 id="candles-subtitle1"></h3>
+          <div class="card">
+              <div id="candles-texts"></div>
+              <h4 id="candles-subtitle2"></h4>
+              <h5 id="candles-list-title"></h5>
+              <ul id="candles-list"></ul>
+              <p id="candles-resume"></p>
+          </div>
+      </div>
+    </section>
       <div id="candlesContainer" class="candles-slides"></div>
-    </div>
   </div>
-</section>
   <div class="order">
     <button onclick="orderCandles()" class="order-btn" id="order-btn">Заказать свечу💌</button>
 
-<form id="candleOrderForm" action="https://formsubmit.co/tarakanij.jazz@gmail.com" method="post" style="display: none;">
-  <label for="name">Имя</label>
-  <input type="text" id="name" name="user_name" required>
+    <form id="candleOrderForm" action="https://formsubmit.co/tarakanij.jazz@gmail.com" method="post" style="display: none;">
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="user_name" required>
 
-  <label for="email">e-mail</label>
-  <input type="email" id="email" name="user_email" required>
+      <label for="email">e-mail</label>
+      <input type="email" id="email" name="user_email" required>
 
-  <label for="order-items">Что Вы желаете заказать?</label>
-  <select name="order-items" id="order-items">
-    <option value=""></option>
-  </select>
+      <label for="order-items">Что Вы желаете заказать?</label>
+      <select name="order-items" id="order-items">
+        <option value=""></option>
+      </select>
 
-  <input type="submit" value="Отправить">
-  <div id="candleList"></div>
+      <input type="submit" value="Отправить">
+      <div id="candleList"></div>
 
-</form>
-
-<section id="cakesInfo">
-  <div class="cakes">
-    <div id="aboutCakes" class="about">
-    <h2 id="cakes-title"></h2>
-    <h3 id="cakes-description"></h3>
-      <h3 id="cakes-subtitle1"></h3>
-      <div class="card">
-      
-        <div id="cakes-texts"></div>
-        <h4 id="cakes-subtitle2"></h4>
-        <h5 id="cakes-list-title"></h5>
-        <ul id="cakes-list"></ul>
-        <p id="cakes-resume"></p>
-      </div>
-      </div>
-
-    <div id="cakesContainer" class="cakes-slides"></div>
+    </form>
   </div>
-</section>
+    
+    <div class="cakes"></div>
+      <section id="cakesInfo">
+        <div id="aboutCakes" class="about">
+            <h2 id="cakes-title"></h2>
+            <h3 id="cakes-description"></h3>
+            <h3 id="cakes-subtitle1"></h3>
+              <div class="card">
+                <div id="cakes-texts"></div>
+                  <h4 id="cakes-subtitle2"></h4>
+                  <h5 id="cakes-list-title"></h5>
+                  <ul id="cakes-list"></ul>
+                  <p id="cakes-resume"></p>
+                </div>
+              </div>
+        </div>
+        <div id="cakesContainer" class="cakes-slides"></div>
+      </div>
+    </section>
 
 
   <div class="order">
     <button onclick="orderCakes()" class="order-btn" id="order-btn2">Заказать торт💌</button>
 
-<form id="cakeOrderForm" action="/cake-order" method="post" style="display: none;">
-  <label for="name">Имя</label>
-  <input type="text" id="name" name="user_name" required>
+      <form id="cakeOrderForm" action="/cake-order" method="post" style="display: none;">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="user_name" required>
 
-  <label for="email">e-mail</label>
-  <input type="email" id="email" name="user_email" required>
+        <label for="email">e-mail</label>
+        <input type="email" id="email" name="user_email" required>
 
-  <label for="order-items">Загрузите Ваше изображение</label>
-  <input type="file" id="foto" accept="image/jpeg, image/png">
+        <label for="order-items">Загрузите Ваше изображение</label>
+        <input type="file" id="foto" accept="image/jpeg, image/png">
 
-  <label for="description">Дополнительная информация</label>
-  <input type="text" id="description" name="user_description">
+        <label for="description">Дополнительная информация</label>
+        <input type="text" id="description" name="user_description">
 
-  <input type="submit" value="Отправить">
-</form>
+        <input type="submit" value="Отправить">
+      </form>
   </div>
+
   <div id="about_us" class="about">
     <h2 id="about-title"></h2>
-    <div class="card">
-    <div id="about-texts"></div>
+      <div class="card">
+        <div id="about-texts"></div>
+      </div>
   </div>
-  </div>
- <div id="footer">
-  <div id="contact_information" class="contact">
-    <h3 id="contact-title"></h3>
+  <div id="footer">
+    <div id="contact_information" class="contact">
+      <h3 id="contact-title"></h3>
 
-    <div id="contact" class="for_contact">
-      <p id="email"></p>
-      <p id="phone1"></p>
-      <p id="phone2"></p>
+        <div id="contact" class="for_contact">
+            <p id="email"></p>
+            <p id="phone1"></p>
+            <p id="phone2"></p>
+        </div>
+    </div>
+
+    <div id="socials" class="for_contact">
+      <h4>Мы в соцсетях:</h4>
+        <div id="social-links"></div>
     </div>
   </div>
-
-  <div id="socials" class="for_contact">
-    <h4>Мы в соцсетях:</h4>
-    <div id="social-links"></div>
-  </div>
-</div>
 
 
 <script src="script.js"></script>
