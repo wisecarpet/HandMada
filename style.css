@@ -175,7 +175,6 @@ dialog button:hover {
 .cakes {
       padding-top: 10rem;
       max-width: 100%;
-      padding: 2rem;
       text-align: center;
       font-size: 1.6rem;
       word-wrap: break-word;
@@ -190,7 +189,6 @@ dialog button:hover {
       flex-wrap: nowrap;
       overflow-x: auto;
       gap: 2rem;
-      padding: 3rem;
       scroll-behavior: smooth;
       scrollbar-width: none;
     }
@@ -208,6 +206,7 @@ dialog button:hover {
       display: flex;
       flex-wrap: nowrap;
       overflow-x: auto;
+      box-sizing: border-box;
       gap: 1rem;
       justify-content: flex-start;
       margin-top: 1rem;
@@ -302,12 +301,21 @@ dialog button:hover {
 .about p{
   font-size: 1.6rem;
 }
+
+.about {
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 .card {
       max-width: 70rem;
       margin: 0 auto;
       padding: 2rem;
       text-align: left;
       border: 1px thin #3d2b1f;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
  #cakes-list, #candles-list {
       font-size: 1.6remrem;
@@ -323,7 +331,7 @@ dialog button:hover {
       #footer{
         flex-direction: column;
         gap: 2rem;
-        padding: 2 rem;
+        
         width: 100%;
       }
     }
@@ -343,14 +351,16 @@ dialog button:hover {
       margin-top: 20rem;
       word-wrap: break-word;
       overflow-wrap: break-word;
+      border-top: 2px solid #3d2b1f;
+      border-bottom: 2px solid #3d2b1f;
     }
 
 
 #footer {
-    border-top: 2px solid #3d2b1f;
-    border-bottom: 2px solid #3d2b1f;
+    
     width: 100%;
+    box-sizing: border-box;
 }
- #for_contact {
-     max-width: 90%;
+ .for_contact {
+     max-width: 100%;
     }
