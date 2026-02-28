@@ -279,6 +279,53 @@ dialog button:hover {
       transition: background-color 0.3s ease; 
       align-items: center;
     }
+
+    /*form design*/
+    /* form to flex-container*/
+    #candleOrderForm,
+    #cakeOrderForm {
+      display: flex;
+      font-size: 1.6rem;
+      color: #3d2b1f;
+      flex-direction: column;
+      border: none;
+      border-radius: 1rem;
+      padding: 0.8rem;
+      width: 30rem;
+      margin: 2rem auto;
+      gap: 1rem;
+      text-align: center;
+      box-shadow: 0px 8px 1.6rem 0px rgba(0,0,0,0.2);
+    }
+
+    /*drop-down list of input fields*/
+    #candleOrderForm input, #cakeOrderForm input,
+    #candleOrderForm select {
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      border: 1px solid #3c2f2f;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /*style for submit button*/
+
+    #candleOrderForm input[type="submit"],
+    #cakeOrderForm input[type="submit"] {
+      background-color: #ffcc88;
+      font-size: 1.6rem;
+      cursor: pointer;
+      border: none;
+      margin-top: 1rem;
+      font-family: 'Marck Script', cursive;
+    }
+    #candleOrderForm input[type="submit"]:hover,
+    #cakeOrderForm input[type="submit"]:hover {
+      background-color: #ffa889;
+    }
+
+
+
 /*order field*/
 
     .order{

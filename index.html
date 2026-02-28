@@ -65,10 +65,15 @@
         <option value=""></option>
       </select>
 
-      <input type="submit" value="Отправить">
-      <div id="candleList"></div>
+        <h3>Ваш заказ:</h3>
+        <div id="cartPreview" style="margin-bottom: 15px;"></div>
 
+        <!-- скрытое поле, куда положим итоговый заказ -->
+        <input type="hidden" name="order_summary" id="order_summary">
+
+      <input type="submit" value="Отправить">
     </form>
+    <div id="candleList"></div>
   </div>
     
     <div class="cakes"></div>
@@ -94,7 +99,7 @@
   <div class="order">
     <button onclick="orderCakes()" class="order-btn" id="order-btn2">Заказать торт💌</button>
 
-      <form id="cakeOrderForm" action="/cake-order" method="post" style="display: none;">
+      <form id="cakeOrderForm" action="https://formsubmit.co/tarakanij.jazz@gmail.com" method="post" style="display: none;">
         <label for="name">Имя</label>
         <input type="text" id="name" name="user_name" required>
 

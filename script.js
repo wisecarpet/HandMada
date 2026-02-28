@@ -289,3 +289,72 @@ window.addEventListener('load', () => {
         }
     });
 });
+
+
+
+    const productSelect = document.getElementById('order-items');
+    const orderCart = document.getElementById('cartPreview');
+    const orderSummary = document.getElementById('order_summary');
+    const form = document.getElementById('candleOrderForm');
+
+    form.addEventListener('click', (e) => e.stopPropagation());
+
+    productSelect.addEventListener('change', function() {
+            
+            const selectedValue = this.value;
+            const selectedName = this.options[this.selectedIndex].text;
+
+            if (!selectedValue) return;
+
+            const existingRow = orderCart.querySelector(`[data-id="${CSS.escape(selectedValue)}"]`);
+            if (existingRow) {
+                const qtyInput = existingRow.querySelector('.qty');
+                qtyInput.value = Number(qtyInput.value) + 1;
+                updateSummary();
+                this.value = "";
+                return;
+            }
+
+            const itemRow = document.createElement('div');
+            itemRow.className = 'cart-row';
+            itemRow.dataset.id = selectedValue;
+
+            itemRow.innerHTML = `
+            <span>${selectedName}</span>
+            <input class="qty" type="number" name=qty_${selectedValue}" value="1" min="1">
+            <button type="button" class="trash" aria-label="Удалить">🗑️</button>`;
+
+            orderCart.appendChild(itemRow);
+
+            updateSummary();
+            this.value = "";
+    });
+
+    orderCart.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        const trashBtn = e.target.closest('.trash');
+        if (trashBtn) {
+            trashBtn.closest('.cart-row')?.remove();
+            updateSummary();
+        }
+    });
+
+    orderCart.addEventListener('input', (e) => {
+        if (e.target.classList.contains('qty')) {
+            updateSummary();
+        }
+    });
+
+    function updateSummary () {
+        const rows = orderCart.querySelectorAll('.cart-row');
+
+        const parts =[];
+        rows.forEach(row => {
+            const name = row.querySelector('.title')?.textContent?.trim() || '';
+            const qty =row.querySelector('.qty')?.value || '1';
+            if (name) parts.push(`${name} × ${qty}`);
+        });
+
+        orderSummary.value = parts.join(', ');
+    }
