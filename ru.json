@@ -1,0 +1,268 @@
+{
+            "logo": {
+            "logo-title": "Hand Mada",
+            "logo-text": "Торты и свечи, в которые вложена душа"
+                    },
+        "openCakeDialog": "Хочу торт",
+                "cake-Order": "Заказать торт💌",
+                "cake-Information": "Узнать больше💁‍♀️",
+        "openCandleDialog": "Хочу свечу",
+                "candle-Order": "Заказать свечу💌",
+                "candle-Information": "Узнать больше💁‍♀️",
+        "candlesInfo": {
+            "title": "Свечи ручной работы.",
+            "description": "Уют для Вашего дома.",
+            "subtitle1": 
+                "Свечи как холст. Искусство, которое согревает.", 
+                "texts": [ 
+                        "HandMada — это не про тиражирование, а про живое прикосновение кисти. Мы берем лаконичную форму свечи и превращаем её в камерное произведение искусства. Каждое соцветие, каждый лепесток крокуса или колокольчика прописаны вручную, создавая объем и фактуру, которую хочется рассматривать и трогать.", 
+                        "Это декор для тех, кто ищет в вещах душу и ценит «красоту в моменте». Такая свеча не просто горит — она рассказывает историю пробуждающейся природы прямо у вас на столе." 
+                        ], 
+            "subtitle2": "Почему мы?", 
+            "list": { 
+                    "title": "HandMada: Авторская роспись с характером", 
+                         "content": [ 
+                                    "100% Ручная работа: Мы не используем печать или наклейки. Только кисти, краски и живое воображение художника.", 
+                                    "Объемная фактура: Благодаря технике росписи, рисунок на свече кажется живым и рельефным.", 
+                                    "Эксклюзивность: Повторить один и тот же мазок невозможно. Ваша свеча — единственная в своем роде.", 
+                                    "Эстетика подарка: Идеальный выбор, когда хочется подарить что-то особенное, статусное и наполненное теплом." 
+                                    ], 
+            "resume": "В мире массового производства мы выбираем путь художника. Каждая свеча HandMada проходит через руки мастера, превращаясь из обычного воска в объект эстетического удовольствия" 
+                    } 
+                        },
+
+        "candlesContainer": [ 
+                { 
+                "name": "Красный гибискус", 
+                "available": true, 
+                "image": "img/candles/img1.jpg", 
+                "description": "Белая свеча, 9 см." 
+                }, 
+                { 
+                "name": "Сакура", 
+                "available": true, 
+                "image": "img/candles/img2.jpg", 
+                "description": "Белая свеча, 9 см." 
+                }, 
+                { 
+                "name": "Красный мак", 
+                "available": true, 
+                "image": "img/candles/img3.jpg", 
+                "description": "Белая свеча, 9 см." 
+                }, 
+                {
+                "name": "Сирень", 
+                "available": true, 
+                "image": "img/candles/img4.jpg", 
+                "description": "Белая свеча, 9 см." 
+                }, 
+                { 
+                "name": "Крокус", 
+                "available": true, 
+                "image": "img/candles/img5.jpg", 
+                "description": "Белая свеча, 9 см." 
+                }, 
+                { 
+                "name": "Черный гибискус", 
+                "available": true, 
+                "image": "img/candles/img6.jpg", 
+                "description": "Красная свеча, 9 см." 
+                }, 
+                { 
+                "name": "Колокольчик", 
+                "available": true, 
+                "image": "img/candles/img7.jpg", 
+                "description": "Белая свеча, 9 см." 
+                },
+                {
+                "name": "Одуванчик",
+                "available":true,
+                "image":"img/candles/img8.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name": "Гиацинт",
+                "available":true,
+                "image":"img/candles/img9.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name":"Гвоздика",
+                "available":true,
+                "image":"img/candles/img10.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name":"Подснежник",
+                "available":true,
+                "image":"img/candles/img11.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name":"Пасхальная свеча",
+                "available":true,
+                "image":"img/candles/img12.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name":"Мимоза",
+                "available":true,
+                "image":"img/candles/img13.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name":"Тюльпаны",
+                "available":true,
+                "image":"img/candles/img14.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name":"Нарцисс",
+                "available":true,
+                "image":"img/candles/img15.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name":"Мак",
+                "available":true,
+                "image":"img/candles/img16.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name":"Рождественская свеча",
+                "available":true,
+                "image":"img/candles/img17.jpg",
+                "description":"Белая свеча, 9 см."
+                },
+                {
+                "name":"Кит",
+                "available":true,
+                "image":"img/candles/img18.jpg",
+                "description":"Черная свеча, 11 см"    
+                }
+                ],
+        "candle-order": {
+            "order-btn": "Заказать свечу💌",
+                "candleOrderForm": {
+                    "label-name": "Имя",
+                    "label-email": "e-mail",
+                    "label-order-items": "Что Вы желаете заказать?",
+                    "order": "Ваш заказ:",
+                    "submit": "Отправить"
+                                    }
+                },
+        "cakesInfo": {               
+            "title": "Рисуем на тортах по Вашим изображениям",
+            "description": "Праздник с Вашей атмосферой.",
+            "subtitle1":
+                "Ваша история, написанная вкусно.", 
+                "texts": [ 
+                        "Торт от HandMada — это не просто десерт, это центральное событие вашего праздника.", 
+                        "Мы не используем сахарную печать. Каждый рисунок создается вручную пищевыми красками: от быстрых эмоциональных скетчей до детализированных пейзажей." 
+                        ], 
+            "subtitle2": "Почему мы?", 
+            "list": { 
+                    "title": "HandMada: Печем и расписываем торты с характером.", 
+                        "content": [ 
+                                    "Индивидуальный сюжет: Перенесем на торт Ваше любимое фото, кадр из игры или памятный пейзаж.", 
+                                    "Живая живопись: Мазки кисти создают неповторимую фактуру, которую невозможно воспроизвести принтером.", 
+                                    "Эмоции в подарок: Это идеальный способ удивить человека, у которого «уже всё есть»." 
+                                    ], 
+            "resume": "В мире массового производства мы выбираем индивидуальность. Каждый торт - это отдельная история, написанная с любовью." 
+                    } 
+                     },
+        "cakesContainer": [
+                { 
+                "name": "Fortnite", 
+                "image": "img/cakes/img1.jpg" 
+                }, 
+                { 
+                "name": "Лиса", 
+                "image": "img/cakes/img2.jpg" 
+                }, 
+                { 
+                "name": "Кот и Мышь", 
+                "image": "img/cakes/img3.jpg" 
+                }, 
+                { 
+                "name": "Параглайдер. Рисунок по фотографии.", 
+                "image": "img/cakes/img4.jpg" 
+                }, 
+                { 
+                "name": "Розовые пионы", 
+                "image": "img/cakes/img5.jpg" 
+                },
+                {
+                "name":"Красный бархат",
+                "image":"img/cakes/img6.jpg"
+                },
+                {
+                "name":"Пасхальные куличи",
+                "image":"img/cakes/img7.jpg"
+                },
+                {
+                "name":"Рыбка",
+                "image":"img/cakes/img8.jpg"
+                },
+                {
+                "name":"Jurrasic World",
+                "image":"img/cakes/img9.jpg"
+                },
+                {
+                "name":"Коруми",
+                "image":"img/cakes/img10.jpg"
+                },
+                {
+                "name":"Единорожка",
+                "image":"img/cakes/img11.jpg"
+                }
+                            ],
+        "cake-order": {
+            "order-btn2": "Заказать торт💌",
+                "cakeOrderForm": {
+                    "cakeLabel-name": "Имя",
+                    "cakeLabel-email": "e-mail",
+                    "cakeLabel-order-item": "Загрузите Ваше изображение",
+                    "cakeLabel-description": "Дополнительная информация",
+                    "cakeSubmit": "Отправить"
+                }
+        },
+        "title": "Немного о нас:",
+        "texts":    [
+                    "Мы верим, что вещи должны нести тепло.",
+                    "Будь то уютная свеча с весенними цветами или праздничный торт с картиной, написанной специально для Вас - в каждом штрихе живет душа.",
+                    "HandMada - это авторский взгляд на привычные декор и десерты."
+                    ],
+                    
+        "footer": {
+                "title": "Контактная информация:",
+                    "labels": {
+                        "phone1": "Телефон",
+                        "phone2": "Телефон",
+                        "email": "Email"
+                                },
+                    "contacts": {    
+                    "email": "tarakanij.jazz@gmail.com",
+                    "phone1": "+358468122127",
+                    "phone2": "+358451228889"
+                                 },
+                "social_title": "Мы в соцсетях:",
+        "social_links": [
+                    {
+                    "platform": "instagram",
+                    "url": "https://www.instagram.com/handmada_suomesta",
+                    "icon": "icons/img1.png",
+                    "is_active": true
+                    },
+                    {
+                    "platform": "youtube",
+                    "url": "",
+                    "icon": "",
+                    "is_active": false
+                    }
+                        ]           
+                }
+}
+
+
+

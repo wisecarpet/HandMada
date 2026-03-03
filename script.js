@@ -68,174 +68,6 @@ document.addEventListener('click', (e) => {
 });
 
 
-
-/*logotype_texts*/
-
-fetch('logo_ru.json')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('logo-title').textContent = data.title;
-        document.getElementById('logo-text').textContent = data.text;
-    });
-
-/*JSON "About information"*/
-
-fetch('candles_information.json')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('candles-title').textContent = data.title;
-        document.getElementById('candles-description').textContent = data.description;
-        document.getElementById('candles-subtitle1').textContent = data.subtitle1;
-
-        const textContainer = document.getElementById('candles-texts');
-        data.texts.forEach(p => {
-            const paragraph = document.createElement('p');
-            paragraph.textContent = p;
-            textContainer.appendChild(paragraph);   
-        });
-        document.getElementById('candles-subtitle2').textContent = data.subtitle2;
-        document.getElementById('candles-list-title').textContent = data.list.title;
-
-        const listContainer = document.getElementById('candles-list');
-        data.list.content.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            listContainer.appendChild(li);
-        });
-        document.getElementById('candles-resume').textContent = data.list.resume;
-    });
-
-/*JSON About information*/
-
-fetch('cakes_information.json')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('cakes-title').textContent = data.title;
-        document.getElementById('cakes-description').textContent = data.description;
-        document.getElementById('cakes-subtitle1').textContent = data.subtitle1;
-
-        const textContainer = document.getElementById('cakes-texts');
-        data.texts.forEach(p => {
-            const paragraph = document.createElement('p');
-            paragraph.textContent = p;
-            textContainer.appendChild(paragraph);   
-        });
-        document.getElementById('cakes-subtitle2').textContent = data.subtitle2;
-        document.getElementById('cakes-list-title').textContent = data.list.title;
-
-        const listContainer = document.getElementById('cakes-list');
-        data.list.content.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            listContainer.appendChild(li);
-        });
-        document.getElementById('cakes-resume').textContent = data.list.resume;
-    });
-
-    /*JSON about_us*/
-
-/* JSON about_us */
-fetch("about_us.json")
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('about-title').textContent = data.title;
-
-    const textContainer = document.getElementById('about-texts');
-    data.texts.forEach(p => {
-      const paragraph = document.createElement('p');
-      paragraph.textContent = p;
-      textContainer.appendChild(paragraph);
-    });
-  });
-
-/* JSON contact_information */
-fetch("contact_information.json")
-  .then(res => res.json())
-  .then(data => {
-    const footer = data.footer;
-
-    document.getElementById("contact-title").textContent = footer.title;
-
-    document.getElementById("email").textContent = `Email: ${footer.contacts.email}`;
-    document.getElementById("phone1").textContent = `Телефон : ${footer.contacts.phone1}`;
-    document.getElementById("phone2").textContent = `Телефон : ${footer.contacts.phone2}`;
-
-    const socialsContainer = document.getElementById("social-links");
-    socialsContainer.innerHTML = "";
-
-    footer.social_links.forEach(link => {
-      if (!link.is_active) return;
-
-      const block = document.createElement("div");
-      block.classList.add("social-item");
-
-      block.innerHTML = `
-        <p>${link.platform}</p>
-         <img src="${link.icon}" alt="${link.platform}" class="social-icon">
-
-        <a href="${link.url}" target="_blank">${link.url}</a>
-      `;
-
-      socialsContainer.appendChild(block);
-    });
-  });
-
-/*JSON on-stock sheet*/
-fetch('candles.json')
-    .then(response => response.json())
-    .then(data => {
-        const container = document.getElementById('candlesContainer');
-        const select = document.getElementById('order-items');
-
-        data.forEach(candle => {
-            if (candle.available) {
-                const option = document.createElement('option');
-        option.value = candle.name;
-        option.textContent = candle.name;
-        select.appendChild(option);
-
-                const figure = document.createElement('figure');
-                figure.classList.add('candles-slides-item');
-
-                const img = document.createElement('img');
-                img.src = candle.image;
-                img.alt = candle.name;
-
-                const caption = document.createElement('figcaption');
-                caption.innerHTML = `<strong>${candle.name}</strong><br>${candle.description}`;
-
-                figure.appendChild(img);
-                figure.appendChild(caption);
-                container.appendChild(figure);
-            }
-        });
-    })
-    .catch(error => console.error('Ошибка загрузки JSON:', error));
-
-/*JSON cakes-sheet*/
-   fetch('cakes.json')
-    .then(response => response.json())
-    .then(data => {
-        const container = document.getElementById('cakesContainer');
-
-        data.forEach(cake => {
-                const figure = document.createElement('figure');
-                figure.classList.add('cakes-slides-item');
-
-                const img = document.createElement('img');
-                img.src = cake.image;
-                img.alt = cake.name;
-
-                const caption = document.createElement('figcaption');
-                caption.innerHTML = `<strong>${cake.name}</strong>`;
-
-                figure.appendChild(img);
-                figure.appendChild(caption);
-                container.appendChild(figure);
-        });
-    })
-    .catch(error => console.error('Ошибка загрузки JSON:', error));
-
 function moreForCakes() {
     document.getElementById('cakeDialog').close();
         document.getElementById('cakesInfo')
@@ -358,3 +190,170 @@ window.addEventListener('load', () => {
 
         orderSummary.value = parts.join(', ');
     }
+
+    fetch('ru.json')
+        .then(response => response.json())
+        .then(data => {
+            /*logotype_texts*/
+            document.getElementById('logo-title').textContent = data.logo['logo-title'];
+            document.getElementById('logo-text').textContent = data.logo['logo-text'];
+
+            /*hero.dialog*/
+            document.getElementById('openCakeDialog').textContent = data.openCakeDialog;
+                document.getElementById('cake-Order').textContent = data['cake-Order'];
+                document.getElementById('cake-Information').textContent = data['cake-Information'];
+
+            document.getElementById('openCandleDialog').textContent = data.openCandleDialog;
+                document.getElementById('candle-Order').textContent = data['candle-Order'];
+                document.getElementById('candle-Information').textContent = data['candle-Information'];
+
+            /*candle-informetion*/
+            document.getElementById('candles-title').textContent = data.candlesInfo.title;
+            document.getElementById('candles-description').textContent = data.candlesInfo.description;
+            document.getElementById('candles-subtitle1').textContent = data.candlesInfo.subtitle1;
+
+            const candleTextContainer = document.getElementById('candles-texts');
+            data.candlesInfo.texts.forEach(p => {
+                const paragraph = document.createElement('p');
+                paragraph.textContent = p;
+                candleTextContainer.appendChild(paragraph);   
+                                    });
+
+            document.getElementById('candles-subtitle2').textContent = data.candlesInfo.subtitle2;
+            document.getElementById('candles-list-title').textContent = data.candlesInfo.list.title;
+
+            const candleListContainer = document.getElementById('candles-list');
+            data.candlesInfo.list.content.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                candleListContainer.appendChild(li);
+                                    });
+            document.getElementById('candles-resume').textContent = data.candlesInfo.list.resume;
+
+            /*candles-galleria*/
+            const candleContainer = document.getElementById('candlesContainer');
+            const select = document.getElementById('order-items');
+
+        
+
+            data.candlesContainer.forEach(candle => {
+                if (candle.available) {
+                    const option = document.createElement('option');
+                        option.value = candle.name;
+                        option.textContent = candle.name;
+                    select.appendChild(option);
+
+                    const figure = document.createElement('figure');
+                    figure.classList.add('candles-slides-item');
+
+                    const img = document.createElement('img');
+                    img.src = candle.image;
+                    img.alt = candle.name;
+
+                    const caption = document.createElement('figcaption');
+                    caption.innerHTML = `<strong>${candle.name}</strong><br>${candle.description}`;
+
+                    figure.appendChild(img);
+                    figure.appendChild(caption);
+                    candleContainer.appendChild(figure);
+                                    }
+                        });
+
+            /*candles order-form*/
+            document.getElementById('order-btn').textContent = data['candle-order']['order-btn'];
+            document.getElementById('label-name').textContent = data['candle-order'].candleOrderForm['label-name'];
+            document.getElementById('label-email').textContent = data['candle-order'].candleOrderForm['label-email'];
+            document.getElementById('label-order-items').textContent = data['candle-order'].candleOrderForm['label-order-items'];
+            document.getElementById('order').textContent = data['candle-order'].candleOrderForm['order'];
+            document.getElementById('submit').value = data['candle-order'].candleOrderForm['submit'];
+             
+            /*cakes-information*/
+            document.getElementById('cakes-title').textContent = data.cakesInfo.title;
+            document.getElementById('cakes-description').textContent = data.cakesInfo.description;
+            document.getElementById('cakes-subtitle1').textContent = data.cakesInfo.subtitle1;
+
+                const cakeTextContainer = document.getElementById('cakes-texts');
+                data.cakesInfo.texts.forEach(p => {
+                const paragraph = document.createElement('p');
+                paragraph.textContent = p;
+                cakeTextContainer.appendChild(paragraph);   
+                                        });
+            document.getElementById('cakes-subtitle2').textContent = data.cakesInfo.subtitle2;
+            document.getElementById('cakes-list-title').textContent = data.cakesInfo.list.title;
+
+                const cakeListContainer = document.getElementById('cakes-list');
+                data.cakesInfo.list.content.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                cakeListContainer.appendChild(li);
+                                                    });
+            document.getElementById('cakes-resume').textContent = data.cakesInfo.list.resume;
+
+            /*cakes-galleria*/
+            const cakeContainer = document.getElementById('cakesContainer');
+
+            data.cakesContainer.forEach(cake => {
+                const figure = document.createElement('figure');
+                figure.classList.add('cakes-slides-item');
+
+                const img = document.createElement('img');
+                img.src = cake.image;
+                img.alt = cake.name;
+
+                const caption = document.createElement('figcaption');
+                caption.innerHTML = `<strong>${cake.name}</strong>`;
+
+                figure.appendChild(img);
+                figure.appendChild(caption);
+                cakeContainer.appendChild(figure);
+        });   
+
+            /*cakes order-form*/
+            document.getElementById('order-btn2').textContent = data['cake-order']['order-btn2']; 
+                const formPath = data['cake-order']['cakeOrderForm'];          
+            document.getElementById('cakeLabel-name').textContent = formPath['cakeLabel-name'];
+            document.getElementById('cakeLabel-email').textContent = formPath['cakeLabel-email'];
+            document.getElementById('cakeLabel-order-item').textContent = formPath['cakeLabel-order-item'];
+            document.getElementById('cakeLabel-description').textContent = formPath['cakeLabel-description'];
+            document.getElementById('cakeSubmit').value = formPath['cakeSubmit'];
+
+            /*about HandMada*/
+            document.getElementById('about-title').textContent = data.title;
+
+                const textContainer = document.getElementById('about-texts');
+                data.texts.forEach(p => {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = p;
+                    textContainer.appendChild(paragraph);
+                                        });
+
+            /*contact to HandMada*/
+            const footer = data.footer;
+
+            document.getElementById("contact-title").textContent = footer.title;
+
+            document.getElementById("email").textContent = `${footer.labels.email}: ${footer.contacts.email}`;
+            document.getElementById("phone1").textContent = `${footer.labels.phone1}: ${footer.contacts.phone1}`;
+            document.getElementById("phone2").textContent = `${footer.labels.phone2}: ${footer.contacts.phone2}`;
+            document.getElementById('social_title').textContent = data.footer['social_title'];
+                    const socialsContainer = document.getElementById("social-links");
+   
+                    socialsContainer.innerHTML = "";
+
+            footer.social_links.forEach(link => {
+                    if (!link.is_active) return;
+
+                        const block = document.createElement("div");
+                        block.classList.add("social-item");
+
+                        block.innerHTML = `
+                                            <p>${link.platform}</p>
+                                            <img src="${link.icon}" alt="${link.platform}" class="social-icon">
+
+                                            <a href="${link.url}" target="_blank">${link.url}</a>
+                                            `;
+
+                        socialsContainer.appendChild(block);
+                                                });
+
+        });

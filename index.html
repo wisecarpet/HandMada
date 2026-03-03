@@ -8,7 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="lang-switcher">
+    <button onclick="changeLanguage('ru')">RU</button>
+    <button onclick="changeLanguage('en')">EN</button>
+    <button onclick="changeLanguage('fi')">FI</button>
+    <button onclick="changeLanguage('ua')">UA</button>
 
+</div>
   <div class="hero">
     <div class="logotype">
        <img class="logo_image" src="icons/logo3.JPG">
@@ -18,17 +24,17 @@
           </div>
     </div>
     
-    <button id="openCakeDialog">Хочу торт</button>
-    <button id="openCandleDialog">Хочу свечу</button>
+    <button id="openCakeDialog"></button>
+    <button id="openCandleDialog"></button>
 
       <dialog id="cakeDialog">
-        <button onclick="doCakeOrder()" id="cake-Order">Заказать торт💌</button>
-        <button onclick="moreForCakes()" id="cake-Information">Узнать больше💁‍♀️</button>
+        <button onclick="doCakeOrder()" id="cake-Order"></button>
+        <button onclick="moreForCakes()" id="cake-Information"></button>
         <button class="closeDialog">✗</button>
       </dialog>
       <dialog id="candleDialog">
-        <button onclick="doCandleOrder()" id="candle-Order">Заказать свечу💌</button>
-        <button onclick="moreForCandles()" id="candle-Information">Узнать больше💁‍♀️</button>
+        <button onclick="doCandleOrder()" id="candle-Order"></button>
+        <button onclick="moreForCandles()" id="candle-Information"></button>
         <button class="closeDialog">✗</button>
       </dialog>
   </div>
@@ -51,27 +57,27 @@
       <div id="candlesContainer" class="candles-slides"></div>
   </div>
   <div class="order">
-    <button onclick="orderCandles()" class="order-btn" id="order-btn">Заказать свечу💌</button>
+    <button onclick="orderCandles()" class="order-btn" id="order-btn"></button>
 
     <form id="candleOrderForm" action="https://formsubmit.co/tarakanij.jazz@gmail.com" method="post" style="display: none;">
-      <label for="name">Имя</label>
+      <label for="name" id="label-name"></label>
       <input type="text" id="name" name="user_name" required>
 
-      <label for="email">e-mail</label>
+      <label for="email" id="label-email"></label>
       <input type="email" id="email" name="user_email" required>
 
-      <label for="order-items">Что Вы желаете заказать?</label>
+      <label for="order-items" id="label-order-items"></label>
       <select name="order-items" id="order-items">
         <option value=""></option>
       </select>
 
-        <h3>Ваш заказ:</h3>
+        <h3 id="order"></h3>
         <div id="cartPreview" style="margin-bottom: 15px;"></div>
 
         <!-- скрытое поле, куда положим итоговый заказ -->
         <input type="hidden" name="order_summary" id="order_summary">
 
-      <input type="submit" value="Отправить">
+      <input type="submit" id="submit" value="">
     </form>
     <div id="candleList"></div>
   </div>
@@ -97,22 +103,22 @@
 
 
   <div class="order">
-    <button onclick="orderCakes()" class="order-btn" id="order-btn2">Заказать торт💌</button>
+    <button onclick="orderCakes()" class="order-btn" id="order-btn2"></button>
 
       <form id="cakeOrderForm" action="https://formsubmit.co/tarakanij.jazz@gmail.com" method="post" style="display: none;">
-        <label for="name">Имя</label>
+        <label for="name" id="cakeLabel-name"></label>
         <input type="text" id="name" name="user_name" required>
 
-        <label for="email">e-mail</label>
+        <label for="email" id="cakeLabel-email"></label>
         <input type="email" id="email" name="user_email" required>
 
-        <label for="order-items">Загрузите Ваше изображение</label>
+        <label for="order-items" id="cakeLabel-order-item"></label>
         <input type="file" id="foto" accept="image/jpeg, image/png">
 
-        <label for="description">Дополнительная информация</label>
+        <label for="description" id="cakeLabel-description"></label>
         <input type="text" id="description" name="user_description">
 
-        <input type="submit" value="Отправить">
+        <input type="submit" id="cakeSubmit" value="">
       </form>
   </div>
 
@@ -134,7 +140,7 @@
     </div>
 
     <div id="socials" class="for_contact">
-      <h4>Мы в соцсетях:</h4>
+      <h4 id="social_title"></h4>
         <div id="social-links"></div>
     </div>
   </div>
