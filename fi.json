@@ -1,0 +1,286 @@
+{
+            "logo": {
+            "logo-title": "Hand Mada",
+            "logo-text": "Kakkuja ja kynttilöitä, joihin on valettu sielu."
+                    },
+        "openCakeDialog": "Haluan kakkua",
+                "cake-Order": "Tilata kakkua💌",
+                "cake-Information": "Lisäätietoja💁‍♀️",
+        "openCandleDialog": "Haluan kynttilää",
+                "candle-Order": "Tilata kynttilää💌",
+                "candle-Information": "Lisäätietoja💁‍♀️",
+        "candlesInfo": {
+            "title": "Käsintehtyjä kynttilöitä.",
+            "description": "Tunnelmaa ja lämpöä kotiisi.",
+            "subtitle1": 
+                "Kynttilä on kankaani. Taidetta, joka lämmittää.", 
+                "texts": [ 
+                        "HandMada ei ole sarjatuotantoa, vaan siveltimen elävä kosketus. Muutamme kynttilän pelkistetyn muodon intiimiksi taideteokseksi. Jokainen kukinto, jokainen krookuksen tai kissankellon terälehti on maalattu käsin — luoden tekstuuria, jota haluaa katsoa ja koskettaa.", 
+                        "Tämä on sisustusta niille, jotka etsivät esineistä sielua ja arvostavat hetken kauneutta. Tällainen kynttilä ei vain pala — se kertoo tarinaa heräävästä luonnosta suoraan pöydälläsi." 
+                        ], 
+            "subtitle2": "Miksi valita meidät?", 
+            "list": { 
+                    "title": "andMada: Luovaa maalaustaiteen luonnetta", 
+                         "content": [ 
+                                    "100 % Käsityötä: Emme käytä tulosteita tai tarroja. Vain siveltimet, värit ja taiteilijan elävä mielikuvitus.", 
+                                    "Kolmiulotteinen tekstuuri: Maalaustekniikan ansiosta kynttilän kuvio tuntuu elävältä ja reliefimäiseltä.", 
+                                    "Ainutlaatuisuus: Samaa siveltimenvetoa on mahdotonta toistaa. Kynttiläsi on lajissaan ainoa.", 
+                                    "Lahjan estetiikka: Täydellinen valinta, kun haluat antaa jotain erityistä, arvokasta ja lämmöllä täytettyä."
+                                    ], 
+            "resume": "Massatuotannon maailmassa me valitsemme taiteilijan tien. Jokainen HandMada-kynttilä kulkee mestarin käsien kautta, muuttuen tavallisesta vahasta esteettiseksi elämykseksi." 
+                    } 
+                        },
+
+        "candlesContainer": [ 
+                {
+                "id": "candle-Red hibiscus",
+                "name": "Punainen hibiskus", 
+                "available": true, 
+                "image": "img/candles/img1.jpg", 
+                "description": "Valkoinen kynttilä, 9 см." 
+                }, 
+                { 
+                "id": "candle-Sakura",
+                "name": "Sakura", 
+                "available": true, 
+                "image": "img/candles/img2.jpg", 
+                "description": "Valkoinen kynttilä, 9 см." 
+                }, 
+                { 
+                "id": "candle-Red poppy",
+                "name": "Punainen unikko", 
+                "available": true, 
+                "image": "img/candles/img3.jpg", 
+                "description": "Valkoinen kynttilä, 9 см." 
+                }, 
+                {
+                "id": "candle-Lilac",
+                "name": "Liila", 
+                "available": true, 
+                "image": "img/candles/img4.jpg", 
+                "description": "Valkoinen kynttilä, 9 см." 
+                }, 
+                { 
+                "id": "candle-Crocus",
+                "name": "Krookus", 
+                "available": true, 
+                "image": "img/candles/img5.jpg", 
+                "description": "Valkoinen kynttilä, 9 см."
+                }, 
+                { 
+                "id": "candle-Black hibiscus",
+                "name": "Musta hibiskus", 
+                "available": true, 
+                "image": "img/candles/img6.jpg", 
+                "description": "Punainen kynttilä, 9 см."
+                }, 
+                { 
+                "id": "candle-Bellflower",
+                "name": "Kello", 
+                "available": true, 
+                "image": "img/candles/img7.jpg", 
+                "description": "Valkoinen kynttilä, 9 см." 
+                },
+                {
+                "id": "candle-Dandelion",
+                "name": "Voikukka",
+                "available":true,
+                "image":"img/candles/img8.jpg",
+                "description": "Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Hyacinth",
+                "name": "Hyasintti",
+                "available":true,
+                "image":"img/candles/img9.jpg",
+                "description":"Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Carnation",
+                "name":"Neilikka",
+                "available":true,
+                "image":"img/candles/img10.jpg",
+                "description":"Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Snowdrop",
+                "name":"Lumikello",
+                "available":true,
+                "image":"img/candles/img11.jpg",
+                "description":"Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Easter candle",
+                "name":"Pääsiäiskynttilä",
+                "available":true,
+                "image":"img/candles/img12.jpg",
+                "description":"Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Mimosa",
+                "name":"Mimoosa",
+                "available":true,
+                "image":"img/candles/img13.jpg",
+                "description":"Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Tulips",
+                "name":"Tulppaanit",
+                "available":true,
+                "image":"img/candles/img14.jpg",
+                "description":"Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Narcissus",
+                "name":"Narsissi",
+                "available":true,
+                "image":"img/candles/img15.jpg",
+                "description":"Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Poppy",
+                "name":"Unikko",
+                "available":true,
+                "image":"img/candles/img16.jpg",
+                "description":"Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Christmas candle",
+                "name":"Joulukynttilä",
+                "available":true,
+                "image":"img/candles/img17.jpg",
+                "description":"Valkoinen kynttilä, 9 см."
+                },
+                {
+                "id": "candle-Whale",
+                "name":"Valas",
+                "available":true,
+                "image":"img/candles/img18.jpg",
+                "description":"Musta kynttilä, 9 см."    
+                }
+                ],
+        "candle-order": {
+            "order-btn": "Tilata kynttilää💌",
+                "candleOrderForm": {
+                    "label-name": "Nimi",
+                    "label-email": "e-mail",
+                    "label-order-items": "Mitä haluaisitte tilata?",
+                    "order": "Teidän tilaus:",
+                    "submit": "Lähetä"
+                                    }
+                },
+        "cakesInfo": {               
+            "title": "Tilaustyöt: Maalaamme kakkuun haluamasi kuvan",
+            "description": "Juhla sinun tunnelmallasi.",
+            "subtitle1":
+                "Tarinasi, herkullisesti maalattuna.", 
+                "texts": [ 
+                        "HandMada-kakku ei ole vain jälkiruoka, se on juhlanne keskipiste.", 
+                        "Emme käytä sokeritulosteita. Jokainen kuvio luodaan käsin elintarvikeväreillä: nopeista, tunteikkaista luonnekuvista yksityiskohtaisiin maisemiin." 
+                        ], 
+            "subtitle2": "Miksi valita meidät?", 
+            "list": { 
+                    "title": "andMada: Leivomme ja maalaamme kakkuja, joilla on luonnetta.", 
+                        "content": [ 
+                                    "Индивидуальный сюжет: Перенесем на торт Ваше любимое фото, кадр из игры или памятный пейзаж.Yksilöllinen aihe: Siirrämme kakkuun lempikuvasi, otteen pelistä tai rakkaan maiseman.", 
+                                    "Elävä maalaustaide: Siveltimen vedot luovat ainutlaatuisen tekstuurin, jota tulostin ei pysty toistamaan.", 
+                                    "Lahja täynnä tunnetta: Täydellinen tapa yllättää ihminen, jolla on jo kaikkea." 
+                                    ], 
+            "resume": "Massatuotannon maailmassa me valitsemme yksilöllisyyden. Jokainen kakku on oma tarinansa, rakkaudella kirjoitettu." 
+                    } 
+                     },
+        "cakesContainer": [
+                { 
+                "name": "Fortnite", 
+                "image": "img/cakes/img1.jpg" 
+                }, 
+                { 
+                "name": "Kettu", 
+                "image": "img/cakes/img2.jpg" 
+                }, 
+                { 
+                "name": "Kissa ja Hiiri", 
+                "image": "img/cakes/img3.jpg" 
+                }, 
+                { 
+                "name": "Varjoliidin. Piirustus valokuvasta.", 
+                "image": "img/cakes/img4.jpg" 
+                }, 
+                { 
+                "name": "Vaaleanpunaiset pionit", 
+                "image": "img/cakes/img5.jpg" 
+                },
+                {
+                "name":"Punainen sametti",
+                "image":"img/cakes/img6.jpg"
+                },
+                {
+                "name":"Pääsiäiskakut",
+                "image":"img/cakes/img7.jpg"
+                },
+                {
+                "name":"Kala",
+                "image":"img/cakes/img8.jpg"
+                },
+                {
+                "name":"Jurrasic World",
+                "image":"img/cakes/img9.jpg"
+                },
+                {
+                "name":"Korumi",
+                "image":"img/cakes/img10.jpg"
+                },
+                {
+                "name":"Yksisarvinen",
+                "image":"img/cakes/img11.jpg"
+                }
+                            ],
+        "cake-order": {
+            "order-btn2": "Tilata kakkua💌",
+                "cakeOrderForm": {
+                    "cakeLabel-name": "Nimi",
+                    "cakeLabel-email": "e-mail",
+                    "cakeLabel-order-item": "Lataa kuvasi",
+                    "cakeLabel-description": "Lisätietoja",
+                    "cakeSubmit": "Lähetä"
+                }
+        },
+        "title": "Hieman meistä:",
+        "texts":    [
+                    "Uskomme, että esineiden kuuluu kantaa mukanaan lämpöä.",
+                    "Olipa kyseessä keväisin kukkasin koristeltu kynttilä tai juhlakakku, joka on maalattu juuri Sinua varten – jokaisessa siveltimenvedossa asuu sielu.",
+                    "HandMada on taiteilijan näkemys tutuista sisustusesineistä ja herkuista."
+                    ],
+                    
+        "footer": {
+                "title": "Ota yhteyttä:",
+                    "labels": {
+                        "phone1": "Puh:",
+                        "phone2": "Puh:",
+                        "email": "Email"
+                                },
+                    "contacts": {    
+                    "email": "tarakanij.jazz@gmail.com",
+                    "phone1": "+358468122127",
+                    "phone2": "+358451228889"
+                                 },
+                "social_title": "Seuraa meitä:",
+        "social_links": [
+                    {
+                    "platform": "instagram",
+                    "url": "https://www.instagram.com/handmada_suomesta",
+                    "icon": "icons/img1.png",
+                    "is_active": true
+                    },
+                    {
+                    "platform": "youtube",
+                    "url": "",
+                    "icon": "",
+                    "is_active": false
+                    }
+                        ]           
+                }
+}
+
+
+

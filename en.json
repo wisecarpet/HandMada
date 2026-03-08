@@ -1,0 +1,286 @@
+{
+            "logo": {
+            "logo-title": "Hand Mada",
+            "logo-text": "Cakes and candles created with a soul."
+                    },
+        "openCakeDialog": "Get a Cake",
+                "cake-Order": "Order a cake now💌",
+                "cake-Information": "Discover more💁‍♀️",
+        "openCandleDialog": "Get a Candle",
+                "candle-Order": "Order a candle now💌",
+                "candle-Information": "Discover more💁‍♀️",
+        "candlesInfo": {
+            "title": "Hand-painted candles.",
+            "description": "Comfort and coziness for your home",
+            "subtitle1": 
+                "Candles as a canvas. Art that warms the heart.", 
+                "texts": [ 
+                        "HandMada is not about mass production; it's about the living touch of a brush. We take a simple candle and turn it into a chamber piece of art. Every petal of a crocus or a bellflower is painted by hand, creating a texture you’ll want to look at and touch.", 
+                        "This is decor for those who value 'beauty in the moment.' These candles don’t just burn — they tell a story of nature awakening right on your table." 
+                        ], 
+            "subtitle2": "Why us?", 
+            "list": { 
+                    "title": "HandMada: Hand-painted with character.", 
+                         "content": [ 
+                                    "100% Handmade: No prints or stickers. Only brushes, paints, and the artist's imagination.", 
+                                    "Unique Texture: Our painting technique makes every design feel alive and tactile.", 
+                                    "Truly Exclusive: It’s impossible to repeat the same brushstroke twice. Your candle is one of a kind.", 
+                                    "The Perfect Gift: An ideal choice for someone special, filled with warmth and elegance."
+                                    ], 
+            "resume": "In a world of mass production, we choose the artisan’s path. Every HandMada candle is shaped by human hands, transforming simple wax into a piece of pure aesthetic delight." 
+                    } 
+                        },
+
+        "candlesContainer": [ 
+                { 
+                "id": "candle-Red hibiscus",
+                "name": "Red hibiscus", 
+                "available": true, 
+                "image": "img/candles/img1.jpg", 
+                "description": "White candle, 9 см." 
+                }, 
+                { 
+                "id": "candle-Sakura",
+                "name": "Sakura", 
+                "available": true, 
+                "image": "img/candles/img2.jpg", 
+                "description": "White candle, 9 см." 
+                }, 
+                { 
+                "id": "candle-Red poppy",
+                "name": "Red poppy", 
+                "available": true, 
+                "image": "img/candles/img3.jpg", 
+                "description": "White candle, 9 см." 
+                }, 
+                {
+                "id": "candle-Lilac",
+                "name": "Lilac", 
+                "available": true, 
+                "image": "img/candles/img4.jpg", 
+                "description": "White candle, 9 см." 
+                }, 
+                { 
+                "id": "candle-Crocus",
+                "name": "Crocus", 
+                "available": true, 
+                "image": "img/candles/img5.jpg", 
+                "description": "White candle, 9 см." 
+                }, 
+                { 
+                "id": "candle-Black hibiscus",
+                "name": "Black hibiscus", 
+                "available": true, 
+                "image": "img/candles/img6.jpg", 
+                "description": "Red candle, 9 см." 
+                }, 
+                { 
+                "id": "candle-Bellflower",
+                "name": "Bellflower", 
+                "available": true, 
+                "image": "img/candles/img7.jpg", 
+                "description": "White candle, 9 см." 
+                },
+                {
+                "id": "candle-Dandelion",
+                "name": "Dandelion",
+                "available":true,
+                "image":"img/candles/img8.jpg",
+                "description": "White candle, 9 см."
+                },
+                {
+                "id": "candle-Hyacinth",
+                "name": "Hyacinth",
+                "available":true,
+                "image":"img/candles/img9.jpg",
+                "description":"White candle, 9 см."
+                },
+                {
+                "id": "candle-Carnation",
+                "name":"Carnation",
+                "available":true,
+                "image":"img/candles/img10.jpg",
+                "description":"White candle, 9 см."
+                },
+                {
+                "id": "candle-Snowdrop",
+                "name":"Snowdrop",
+                "available":true,
+                "image":"img/candles/img11.jpg",
+                "description":"White candle, 9 см."
+                },
+                {
+                "id": "candle-Easter candle",
+                "name":"Easter candle",
+                "available":true,
+                "image":"img/candles/img12.jpg",
+                "description":"White candle, 9 см."
+                },
+                {
+                "id": "candle-Mimosa",
+                "name":"Mimosa",
+                "available":true,
+                "image":"img/candles/img13.jpg",
+                "description":"White candle, 9 см."
+                },
+                {
+                "id": "candle-Tulips",
+                "name":"Tulips",
+                "available":true,
+                "image":"img/candles/img14.jpg",
+                "description":"White candle, 9 см."
+                },
+                {
+                "id": "candle-Narcissus",
+                "name":"Narcissus",
+                "available":true,
+                "image":"img/candles/img15.jpg",
+                "description":"White candle, 9 см."
+                },
+                {
+                "id": "candle-Poppy",
+                "name":"Poppy",
+                "available":true,
+                "image":"img/candles/img16.jpg",
+                "description":"White candle, 9 см."
+                },
+                {
+                "id": "candle-Christmas candle",
+                "name":"Christmas candle",
+                "available":true,
+                "image":"img/candles/img17.jpg",
+                "description":"White candle, 9 см."
+                },
+                {
+                "id": "candle-Whale",
+                "name":"Whale",
+                "available":true,
+                "image":"img/candles/img18.jpg",
+                "description":"Black candle, 9 см."    
+                }
+                ],
+        "candle-order": {
+            "order-btn": "Order a candle now💌",
+                "candleOrderForm": {
+                    "label-name": "Your Name",
+                    "label-email": "Email Address",
+                    "label-order-items": "What would you like to order?",
+                    "order": "Your order:",
+                    "submit": "Send Request"
+                                    }
+                },
+        "cakesInfo": {               
+            "title": "Turning cakes into canvases: custom hand-painted designs based on your images.",
+            "description": "Edible masterpieces for your special moments",
+            "subtitle1":
+                "ВWhere taste meets fine art.", 
+                "texts": [ 
+                        "A HandMada cake is more than just a dessert; it is the centerpiece of your celebration.", 
+                        "We forgo sugar printing in favor of true artistry. Every design is hand-painted with edible colors—ranging from soulful, expressive sketches to intricately detailed landscapes." 
+                        ], 
+            "subtitle2": "Why our cakes?", 
+            "list": { 
+                    "title": "Where taste meets fine art.", 
+                        "content": [ 
+                                    "Personalized Stories: We’ll bring your favorite photo, a scene from a game, or a cherished landscape to life on your cake", 
+                                    "Living Art: Visible brushstrokes create a unique texture that no printer can ever replicate.", 
+                                    "The Gift of Emotion: The perfect way to surprise someone who already has everything." 
+                                    ], 
+            "resume": "Embracing the personal in a mass-produced world. Each of our cakes is a story told by hand and crafted with heart." 
+                    } 
+                     },
+        "cakesContainer": [
+                { 
+                "name": "Fortnite", 
+                "image": "img/cakes/img1.jpg" 
+                }, 
+                { 
+                "name": "Fox", 
+                "image": "img/cakes/img2.jpg" 
+                }, 
+                { 
+                "name": "Cat and Mouse", 
+                "image": "img/cakes/img3.jpg" 
+                }, 
+                { 
+                "name": "Paraglider. Drawing from a photography.", 
+                "image": "img/cakes/img4.jpg" 
+                }, 
+                { 
+                "name": "Pink peonies", 
+                "image": "img/cakes/img5.jpg" 
+                },
+                {
+                "name":"Red velvet",
+                "image":"img/cakes/img6.jpg"
+                },
+                {
+                "name":"Easter cakes",
+                "image":"img/cakes/img7.jpg"
+                },
+                {
+                "name":"Fish",
+                "image":"img/cakes/img8.jpg"
+                },
+                {
+                "name":"Jurrasic World",
+                "image":"img/cakes/img9.jpg"
+                },
+                {
+                "name":"Korumi",
+                "image":"img/cakes/img10.jpg"
+                },
+                {
+                "name":"Unicorn",
+                "image":"img/cakes/img11.jpg"
+                }
+                            ],
+        "cake-order": {
+            "order-btn2": "Order a cake💌",
+                "cakeOrderForm": {
+                    "cakeLabel-name": "Name",
+                    "cakeLabel-email": "e-mail",
+                    "cakeLabel-order-item": "Upload your image",
+                    "cakeLabel-description": "Additional information",
+                    "cakeSubmit": "Send"
+                }
+        },
+        "title": "A little about us:",
+        "texts":    [
+                    "We believe every object should radiate warmth.",
+                    "Whether it’s a cozy candle adorned with spring flowers or a celebratory cake featuring a painting created just for you—there is a soul in every stroke.",
+                    "HandMada is a signature take on everyday decor and desserts."
+                    ],
+                    
+        "footer": {
+                "title": "Contact information:",
+                    "labels": {
+                        "phone1": "Phone",
+                        "phone2": "Phone",
+                        "email": "Email"
+                                },
+                    "contacts": {    
+                    "email": "tarakanij.jazz@gmail.com",
+                    "phone1": "+358468122127",
+                    "phone2": "+358451228889"
+                                 },
+                "social_title": "Follow us",
+        "social_links": [
+                    {
+                    "platform": "instagram",
+                    "url": "https://www.instagram.com/handmada_suomesta",
+                    "icon": "icons/img1.png",
+                    "is_active": true
+                    },
+                    {
+                    "platform": "youtube",
+                    "url": "",
+                    "icon": "",
+                    "is_active": false
+                    }
+                        ]           
+                }
+}
+
+
+

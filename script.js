@@ -151,8 +151,9 @@ window.addEventListener('load', () => {
             itemRow.className = 'cart-row';
             itemRow.dataset.id = selectedValue;
 
+            itemRow.innerHTML ="";
             itemRow.innerHTML = `
-            <span>${selectedName}</span>
+            <span class="item-name">${selectedName}</span>
             <input class="qty" type="number" name=qty_${selectedValue}" value="1" min="1">
             <button type="button" class="trash" aria-label="Удалить">🗑️</button>`;
 
@@ -191,9 +192,15 @@ window.addEventListener('load', () => {
         orderSummary.value = parts.join(', ');
     }
 
-    fetch('ru.json')
+function changeLanguage(lang) {
+    console.log ('выбран язык, lang');
+     
+    document.documentElement.lang = lang;
+    fetch(`${lang}.json`)
         .then(response => response.json())
         .then(data => {
+            /*We take data from a file with the selected language*/
+            const currentLangData = data[lang];
             /*logotype_texts*/
             document.getElementById('logo-title').textContent = data.logo['logo-title'];
             document.getElementById('logo-text').textContent = data.logo['logo-text'];
@@ -212,7 +219,9 @@ window.addEventListener('load', () => {
             document.getElementById('candles-description').textContent = data.candlesInfo.description;
             document.getElementById('candles-subtitle1').textContent = data.candlesInfo.subtitle1;
 
+            
             const candleTextContainer = document.getElementById('candles-texts');
+            candleTextContainer.innerHTML = '';
             data.candlesInfo.texts.forEach(p => {
                 const paragraph = document.createElement('p');
                 paragraph.textContent = p;
@@ -223,6 +232,7 @@ window.addEventListener('load', () => {
             document.getElementById('candles-list-title').textContent = data.candlesInfo.list.title;
 
             const candleListContainer = document.getElementById('candles-list');
+            candleListContainer.innerHTML = '';
             data.candlesInfo.list.content.forEach(item => {
                 const li = document.createElement('li');
                 li.textContent = item;
@@ -234,12 +244,13 @@ window.addEventListener('load', () => {
             const candleContainer = document.getElementById('candlesContainer');
             const select = document.getElementById('order-items');
 
-        
-
+            select.innerHTML = '<option value=""></option>';
+            /*container is empty before selected lang data loading*/
+            candleContainer.innerHTML = '';
             data.candlesContainer.forEach(candle => {
                 if (candle.available) {
                     const option = document.createElement('option');
-                        option.value = candle.name;
+                        option.value = candle.id;
                         option.textContent = candle.name;
                     select.appendChild(option);
 
@@ -266,6 +277,41 @@ window.addEventListener('load', () => {
             document.getElementById('label-order-items').textContent = data['candle-order'].candleOrderForm['label-order-items'];
             document.getElementById('order').textContent = data['candle-order'].candleOrderForm['order'];
             document.getElementById('submit').value = data['candle-order'].candleOrderForm['submit'];
+
+            // 1. Сначала находим ВСЕ строки корзины
+
+const cartRows = document.querySelectorAll('.cart-row');
+
+// 2. Запускаем цикл, только если строки нашлись
+        cartRows.forEach(row => {
+        const productId = row.dataset.id; 
+        const nameSpan = row.querySelector('.item-name'); // Проверь, что класс именно .item-name (через дефис!)
+
+    // Добавляем проверку: если в строке есть и ID, и место под имя
+        if (productId && nameSpan) {
+             const candle = data.candlesContainer.find(item => item.id === productId);
+        if (candle) {
+            nameSpan.textContent = candle.name;
+        }
+    }
+});
+
+
+cartRows.forEach(row => {
+    const productId = row.dataset.id;
+    const nameSpan = row.querySelector('.item-name');
+
+    if (productId && nameSpan) {
+        const itemData = data.candlesContainer.find(item => item.id === productId);
+
+        if (itemData) {
+            nameSpan.textContent = itemData.name;
+        }
+    }
+});
+
+                
+            
              
             /*cakes-information*/
             document.getElementById('cakes-title').textContent = data.cakesInfo.title;
@@ -273,6 +319,7 @@ window.addEventListener('load', () => {
             document.getElementById('cakes-subtitle1').textContent = data.cakesInfo.subtitle1;
 
                 const cakeTextContainer = document.getElementById('cakes-texts');
+                cakeTextContainer.innerHTML = '';
                 data.cakesInfo.texts.forEach(p => {
                 const paragraph = document.createElement('p');
                 paragraph.textContent = p;
@@ -282,6 +329,7 @@ window.addEventListener('load', () => {
             document.getElementById('cakes-list-title').textContent = data.cakesInfo.list.title;
 
                 const cakeListContainer = document.getElementById('cakes-list');
+                cakeListContainer.innerHTML = '';
                 data.cakesInfo.list.content.forEach(item => {
                 const li = document.createElement('li');
                 li.textContent = item;
@@ -291,7 +339,9 @@ window.addEventListener('load', () => {
 
             /*cakes-galleria*/
             const cakeContainer = document.getElementById('cakesContainer');
-
+            
+            /* container is empty before selected lang loading*/
+            cakeContainer.innerHTML = '';
             data.cakesContainer.forEach(cake => {
                 const figure = document.createElement('figure');
                 figure.classList.add('cakes-slides-item');
@@ -321,6 +371,7 @@ window.addEventListener('load', () => {
             document.getElementById('about-title').textContent = data.title;
 
                 const textContainer = document.getElementById('about-texts');
+                textContainer.innerHTML = '';
                 data.texts.forEach(p => {
                     const paragraph = document.createElement('p');
                     paragraph.textContent = p;
@@ -355,5 +406,9 @@ window.addEventListener('load', () => {
 
                         socialsContainer.appendChild(block);
                                                 });
-
+        localStorage.setItem('selectedLang', lang);
         });
+       
+    };
+
+    changeLanguage('ru');

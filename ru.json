@@ -25,7 +25,7 @@
                                     "100% Ручная работа: Мы не используем печать или наклейки. Только кисти, краски и живое воображение художника.", 
                                     "Объемная фактура: Благодаря технике росписи, рисунок на свече кажется живым и рельефным.", 
                                     "Эксклюзивность: Повторить один и тот же мазок невозможно. Ваша свеча — единственная в своем роде.", 
-                                    "Эстетика подарка: Идеальный выбор, когда хочется подарить что-то особенное, статусное и наполненное теплом." 
+                                    "Эстетика подарка: Идеальный выбор, когда хочется подарить что-то особенное, статусное и наполненное теплом."
                                     ], 
             "resume": "В мире массового производства мы выбираем путь художника. Каждая свеча HandMada проходит через руки мастера, превращаясь из обычного воска в объект эстетического удовольствия" 
                     } 
@@ -33,108 +33,126 @@
 
         "candlesContainer": [ 
                 { 
+                "id": "candle-Red hibiscus",
                 "name": "Красный гибискус", 
                 "available": true, 
                 "image": "img/candles/img1.jpg", 
                 "description": "Белая свеча, 9 см." 
                 }, 
                 { 
+                "id": "candle-Sakura",
                 "name": "Сакура", 
                 "available": true, 
                 "image": "img/candles/img2.jpg", 
                 "description": "Белая свеча, 9 см." 
                 }, 
                 { 
+                "id": "candle-Red poppy",
                 "name": "Красный мак", 
                 "available": true, 
                 "image": "img/candles/img3.jpg", 
                 "description": "Белая свеча, 9 см." 
                 }, 
                 {
+                "id": "candle-Lilac",
                 "name": "Сирень", 
                 "available": true, 
                 "image": "img/candles/img4.jpg", 
                 "description": "Белая свеча, 9 см." 
                 }, 
                 { 
+                "id": "candle-Crocus",
                 "name": "Крокус", 
                 "available": true, 
                 "image": "img/candles/img5.jpg", 
                 "description": "Белая свеча, 9 см." 
                 }, 
                 { 
+                "id": "candle-Black hibiscus",
                 "name": "Черный гибискус", 
                 "available": true, 
                 "image": "img/candles/img6.jpg", 
                 "description": "Красная свеча, 9 см." 
                 }, 
                 { 
+                "id": "candle-Bellflower",
                 "name": "Колокольчик", 
                 "available": true, 
                 "image": "img/candles/img7.jpg", 
                 "description": "Белая свеча, 9 см." 
                 },
                 {
+                "id": "candle-Dandelion",
                 "name": "Одуванчик",
                 "available":true,
                 "image":"img/candles/img8.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Hyacinth",
                 "name": "Гиацинт",
                 "available":true,
                 "image":"img/candles/img9.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Carnation",
                 "name":"Гвоздика",
                 "available":true,
                 "image":"img/candles/img10.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Snowdrop",
                 "name":"Подснежник",
                 "available":true,
                 "image":"img/candles/img11.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Easter candle",
                 "name":"Пасхальная свеча",
                 "available":true,
                 "image":"img/candles/img12.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Mimosa",
                 "name":"Мимоза",
                 "available":true,
                 "image":"img/candles/img13.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Tulips",
                 "name":"Тюльпаны",
                 "available":true,
                 "image":"img/candles/img14.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Narcissus",
                 "name":"Нарцисс",
                 "available":true,
                 "image":"img/candles/img15.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Poppy",
                 "name":"Мак",
                 "available":true,
                 "image":"img/candles/img16.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Christmas candle",
                 "name":"Рождественская свеча",
                 "available":true,
                 "image":"img/candles/img17.jpg",
                 "description":"Белая свеча, 9 см."
                 },
                 {
+                "id": "candle-Whale",
                 "name":"Кит",
                 "available":true,
                 "image":"img/candles/img18.jpg",

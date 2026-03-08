@@ -1,0 +1,286 @@
+{
+            "logo": {
+            "logo-title": "Hand Mada",
+            "logo-text": "Торти та свічки, в які вкладена душа"
+                    },
+        "openCakeDialog": "Хочу торт",
+                "cake-Order": "Замовити торт💌",
+                "cake-Information": "Дізнатись більше💁‍♀️",
+        "openCandleDialog": "Хочу свічку",
+                "candle-Order": "Замовити свічку💌",
+                "candle-Information": "Дізнатись більше💁‍♀️",
+        "candlesInfo": {
+            "title": "Handmade candles.",
+            "description": "Затишок для Вашої оселі.",
+            "subtitle1": 
+                "Свічки як полотно. Мистецтво, що зігріває.", 
+                "texts": [ 
+                        "HandMada - це не про тиражування, а про живий дотик пензля. Ми беремо лаконічну форму свічки і перетворюємо її на камерний витвір мистецтва. Кожне суцвіття, кожна пелюстка крокуса або дзвіночка прописані вручну, створюючи обсяг і фактуру, яку хочеться розглядати та чіпати.", 
+                        "Це декор для тих, хто шукає у речах душу та цінує «красу в моменті». Така свічка не просто горить — вона розповідає історію природи, що прокидається, прямо у вас на столі." 
+                        ], 
+            "subtitle2": "Чому ми?", 
+            "list": { 
+                    "title": "HandMada: Авторський розпис із характером", 
+                         "content": [ 
+                                    "100% Ручна робота: Ми не використовуємо друк або наклейки. Тільки пензлі, фарби та жива уява художника.", 
+                                    "Об'ємна фактура: Завдяки техніці розпису малюнок на свічці здається живим і рельєфним.", 
+                                    "Ексклюзивність: Повторити той самий мазок неможливо. Ваша свічка — єдина у своєму роді.", 
+                                    "Естетика подарунка: Ідеальний вибір, коли хочеться подарувати щось особливе, статусне та наповнене теплом."
+                                    ], 
+            "resume": "У світі масового виробництва ми обираємо шлях художника. Кожна свічка HandMada проходить через руки майстра, перетворюючись зі звичайного воску на об'єкт естетичного задоволення."
+                    } 
+                        },
+
+        "candlesContainer": [ 
+                { 
+                "id": "candle-Red hibiscus",
+                "name": "Червоний гібіскус", 
+                "available": true, 
+                "image": "img/candles/img1.jpg", 
+                "description": "Біла свічка, 9 див." 
+                }, 
+                { 
+                "id": "candle-Sakura",
+                "name": "Сакура", 
+                "available": true, 
+                "image": "img/candles/img2.jpg", 
+                "description": "Біла свічка, 9 див." 
+                }, 
+                { 
+                "id": "candle-Red poppy",
+                "name": "Червоний мак", 
+                "available": true, 
+                "image": "img/candles/img3.jpg", 
+                "description": "Біла свічка, 9 див." 
+                }, 
+                {
+                "id": "candle-Lilac",
+                "name": "Бузок", 
+                "available": true, 
+                "image": "img/candles/img4.jpg", 
+                "description": "Біла свічка, 9 див." 
+                }, 
+                { 
+                "id": "candle-Crocus",
+                "name": "Крокус", 
+                "available": true, 
+                "image": "img/candles/img5.jpg", 
+                "description": "Біла свічка, 9 див."
+                }, 
+                { 
+                "id": "candle-Black hibiscus",
+                "name": "Чорний гібіскус", 
+                "available": true, 
+                "image": "img/candles/img6.jpg", 
+                "description": "Червона свічка, 9 див."
+                }, 
+                { 
+                "id": "candle-Bellflower",
+                "name": "Дзвіночок", 
+                "available": true, 
+                "image": "img/candles/img7.jpg", 
+                "description": "Біла свічка, 9 див." 
+                },
+                {
+                "id": "candle-Dandelion",
+                "name": "Кульбаба",
+                "available":true,
+                "image":"img/candles/img8.jpg",
+                "description": "Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Hyacinth",
+                "name": "Гіацинт",
+                "available":true,
+                "image":"img/candles/img9.jpg",
+                "description":"Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Carnation",
+                "name":"Гвоздика",
+                "available":true,
+                "image":"img/candles/img10.jpg",
+                "description":"Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Snowdrop",
+                "name":"Пролісок",
+                "available":true,
+                "image":"img/candles/img11.jpg",
+                "description":"Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Easter candle",
+                "name":"Великодня свічка",
+                "available":true,
+                "image":"img/candles/img12.jpg",
+                "description":"Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Mimosa",
+                "name":"Мімоза",
+                "available":true,
+                "image":"img/candles/img13.jpg",
+                "description":"Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Tulips",
+                "name":"Тюльпани",
+                "available":true,
+                "image":"img/candles/img14.jpg",
+                "description":"Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Narcissus",
+                "name":"Нарцис",
+                "available":true,
+                "image":"img/candles/img15.jpg",
+                "description":"Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Poppy",
+                "name":"Мак",
+                "available":true,
+                "image":"img/candles/img16.jpg",
+                "description":"Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Christmas candle",
+                "name":"Різдвяна свічка",
+                "available":true,
+                "image":"img/candles/img17.jpg",
+                "description":"Біла свічка, 9 див."
+                },
+                {
+                "id": "candle-Whale",
+                "name":"Кіт",
+                "available":true,
+                "image":"img/candles/img18.jpg",
+                "description":"Чорна свічка, 9 див."    
+                }
+                ],
+        "candle-order": {
+            "order-btn": "Замовити свічку💌",
+                "candleOrderForm": {
+                    "label-name": "Ім'я",
+                    "label-email": "e-mail",
+                    "label-order-items": "Що Ви бажаєте замовити?",
+                    "order": "Ваше замовлення:",
+                    "submit": "Надіслати"
+                                    }
+                },
+        "cakesInfo": {               
+            "title": "Малюємо на тортах за Вашими зображеннями",
+            "description": "Свято з вашою атмосферою.",
+            "subtitle1":
+                "Ваша історія написана смачно.", 
+                "texts": [ 
+                        "Торт від HandMada це не просто десерт, це центральна подія вашого свята.", 
+                        "Ми не використовуємо цукровий друк. Кожен малюнок створюється вручну харчовими фарбами: від швидких емоційних скетчів до деталізованих краєвидів." 
+                        ], 
+            "subtitle2": "Чому ми?", 
+            "list": { 
+                    "title": "HandMada: Печемо та розписуємо торти з характером.", 
+                        "content": [ 
+                                    "Індивідуальний сюжет: Перенесемо на торт Ваше улюблене фото, кадр із гри або пам'ятний краєвид.", 
+                                    "Живий живопис: Мазки пензля створюють неповторну фактуру, яку неможливо відтворити принтером.", 
+                                    "Емоції в подарунок: Це ідеальний спосіб здивувати людину, яка «вже все є»." 
+                                    ], 
+            "resume": "У світі масового виробництва ми вибираємо індивідуальність. Кожен торт – це окрема історія, написана з любов'ю." 
+                    } 
+                     },
+        "cakesContainer": [
+                { 
+                "name": "Fortnite", 
+                "image": "img/cakes/img1.jpg" 
+                }, 
+                { 
+                "name": "Лисиця", 
+                "image": "img/cakes/img2.jpg" 
+                }, 
+                { 
+                "name": "Кіт та Миша", 
+                "image": "img/cakes/img3.jpg" 
+                }, 
+                { 
+                "name": "Параглайдер. Малюнок з фотографії.", 
+                "image": "img/cakes/img4.jpg" 
+                }, 
+                { 
+                "name": "Рожеві півонії", 
+                "image": "img/cakes/img5.jpg" 
+                },
+                {
+                "name":"Червоний оксамит",
+                "image":"img/cakes/img6.jpg"
+                },
+                {
+                "name":"Паски",
+                "image":"img/cakes/img7.jpg"
+                },
+                {
+                "name":"Рибка",
+                "image":"img/cakes/img8.jpg"
+                },
+                {
+                "name":"Jurrasic World",
+                "image":"img/cakes/img9.jpg"
+                },
+                {
+                "name":"Корумі",
+                "image":"img/cakes/img10.jpg"
+                },
+                {
+                "name":"Єдиноріжка",
+                "image":"img/cakes/img11.jpg"
+                }
+                            ],
+        "cake-order": {
+            "order-btn2": "Замовити торт💌",
+                "cakeOrderForm": {
+                    "cakeLabel-name": "Ім'я",
+                    "cakeLabel-email": "e-mail",
+                    "cakeLabel-order-item": "Завантажте зображення",
+                    "cakeLabel-description": "Додаткова інформація",
+                    "cakeSubmit": "Надіслати"
+                }
+        },
+        "title": "Трохи про нас:",
+        "texts":    [
+                    "Ми віримо, що речі мають нести тепло.",
+                    "Будь то затишна свічка з весняними квітами або святковий торт із картиною, написаною спеціально для Вас – у кожному штриху живе душа.",
+                    "HandMada – це авторський погляд на звичні декор та десерти."
+                    ],
+                    
+        "footer": {
+                "title": "Контактна інформація:",
+                    "labels": {
+                        "phone1": "Телефон",
+                        "phone2": "Телефон",
+                        "email": "Email"
+                                },
+                    "contacts": {    
+                    "email": "tarakanij.jazz@gmail.com",
+                    "phone1": "+358468122127",
+                    "phone2": "+358451228889"
+                                 },
+                "social_title": "Ми в соцмережах:",
+        "social_links": [
+                    {
+                    "platform": "instagram",
+                    "url": "https://www.instagram.com/handmada_suomesta",
+                    "icon": "icons/img1.png",
+                    "is_active": true
+                    },
+                    {
+                    "platform": "youtube",
+                    "url": "",
+                    "icon": "",
+                    "is_active": false
+                    }
+                        ]           
+                }
+}
+
+
+
