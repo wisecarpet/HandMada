@@ -279,8 +279,23 @@
                     "is_active": false
                     }
                         ]           
-                }
+                },
+                "email_thank_message": 
+                        {
+                        "thanks_message_candles": "Thank you for choosing us!\n Your order has been accepted.\n We will contact you shortly.",
+                        "best_regards": "Best wishes,\n Your HandMada."
+                        },
+                        "email_candleOrder_message":
+                        {
+                        "theme": "Your Candles",
+                        "hi": "Hello,",
+                        "thanks_text": "Thank you for choosing our products",
+                        "order_title": "Your Order Details:",
+                        "regards": "Best wishes,",
+                        "HandMada": "Your HandMada"
+                        },
+
+                "alert": "Thank you for your order 💌",
+                "btn_prosess": "Sending...",
+                "error": "Error."
 }
-
-
-

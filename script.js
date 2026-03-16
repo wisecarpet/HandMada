@@ -1,3 +1,132 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const candleForm = document.getElementById('candleOrderForm');
+    
+
+    const productSelect = document.getElementById('order-items');
+    const orderCart = document.getElementById('cartPreview');
+    const orderSummary = document.getElementById('order_summary');
+    const form = document.getElementById('candleOrderForm');
+
+    form.addEventListener('click', (e) => e.stopPropagation());
+
+    productSelect.addEventListener('change', function() {
+            
+            const selectedValue = this.value;
+            const selectedName = this.options[this.selectedIndex].text;
+
+            if (!selectedValue) return;
+
+            const existingRow = orderCart.querySelector(`[data-id="${CSS.escape(selectedValue)}"]`);
+            if (existingRow) {
+                const qtyInput = existingRow.querySelector('.qty');
+                qtyInput.value = Number(qtyInput.value) + 1;
+                updateSummary();
+                this.value = "";
+                return;
+            }
+
+            const itemRow = document.createElement('div');
+            itemRow.className = 'cart-row';
+            itemRow.dataset.id = selectedValue;
+
+            itemRow.innerHTML ="";
+            itemRow.innerHTML = `
+            <span class="item-name">${selectedName}</span>
+            <input class="qty" type="number" name="qty_${selectedValue}" value="1" min="1">
+            <button type="button" class="trash" aria-label="Удалить">🗑️</button>`;
+
+            orderCart.appendChild(itemRow);
+
+            updateSummary();
+            console.log("update summary:", orderSummary);
+            this.value = "";
+    });
+
+    orderCart.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        const trashBtn = e.target.closest('.trash');
+        if (trashBtn) {
+            trashBtn.closest('.cart-row')?.remove();
+            updateSummary();
+        }
+    });
+
+    orderCart.addEventListener('input', (e) => {
+        if (e.target.classList.contains('qty')) {
+            updateSummary();
+        }
+    });
+
+    function updateSummary () {
+        const rows = orderCart.querySelectorAll('.cart-row');
+
+        const parts =[];
+        rows.forEach(row => {
+            const name = row.querySelector('.item-name')?.textContent?.trim() || '';
+            const qty =row.querySelector('.qty')?.value || '1';
+            if (name) parts.push(`${name} × ${qty}`);
+        });
+
+        orderSummary.value = parts.join(', ');
+    };
+
+
+
+    candleForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        updateSummary();
+        const btn_submit1 = document.getElementById('submit');
+            btn_submit1.value = currentTranslation.btn_prosess;
+            const subj = document.getElementById('theme');
+            const hello = document.getElementById('hi');
+            const recipient_name = document.getElementById('user_name');
+            const thanks_replay = document.getElementById('thanks_message_candles');
+            const thanks_order = document.getElementById('thanks_text');
+            const order_preview = document.getElementById('order_title');
+
+            const bye = document.getElementById('regards');
+            const from_us = document.getElementById('HandMada');
+            const br_autoreplay = document.getElementById('best_regards');
+
+            const subjEL = document.getElementById('email_subject');
+            const ordElBoby = document.getElementById('order_email_body');
+            const thElBoby = document.getElementById('thaks_email_body');
+
+            subj.value = currentTranslation.email_candleOrder_message.theme;
+            hello.value = currentTranslation.email_candleOrder_message.hi;
+            thanks_replay.value = currentTranslation.email_thank_message.thanks_message_candles;
+            thanks_order.value = currentTranslation.email_candleOrder_message.thanks_text;
+            order_preview.value = currentTranslation.email_candleOrder_message.order_title;
+            bye.value = currentTranslation.email_candleOrder_message.regards;
+            from_us.value = currentTranslation.email_candleOrder_message.HandMada;
+            br_autoreplay.value = currentTranslation.email_thank_message.best_regards;
+console.log("order summary:", orderSummary.value);
+
+        try {
+            await emailjs.sendForm(
+                "service_vb9bi0e",
+                "template_s0o1px1",
+                candleForm
+            );
+
+            alert(currentTranslation.alert);
+            candleForm.reset();
+            candleForm.style.display = 'none';
+            btn_submit1.value = currentTranslation.btn_done;
+            document.getElementById('cartPreview').innerHTML = '';
+        }   catch (err) {
+            console.error("EmailJS error:", err);
+            alert("Упс! Ошибка отправки. Смотри console.");
+        }
+    });
+});
+    
+   
+
+
+let currentTranslation = {};
+
 const cakeBtn = document.getElementById("openCakeDialog");
 const cakeDialog = document.getElementById("cakeDialog");
 const candleBtn = document.getElementById("openCandleDialog");
@@ -107,8 +236,9 @@ function toggleForm(formId, buttonId) {
     } else {
         form.style.display = 'none';
     }
-}
+};
 
+/*
 //debug: //
 window.addEventListener('load', () => {
     const vw = document.documentElement.clientWidth;
@@ -121,86 +251,18 @@ window.addEventListener('load', () => {
         }
     });
 });
+*/
 
-
-
-    const productSelect = document.getElementById('order-items');
-    const orderCart = document.getElementById('cartPreview');
-    const orderSummary = document.getElementById('order_summary');
-    const form = document.getElementById('candleOrderForm');
-
-    form.addEventListener('click', (e) => e.stopPropagation());
-
-    productSelect.addEventListener('change', function() {
-            
-            const selectedValue = this.value;
-            const selectedName = this.options[this.selectedIndex].text;
-
-            if (!selectedValue) return;
-
-            const existingRow = orderCart.querySelector(`[data-id="${CSS.escape(selectedValue)}"]`);
-            if (existingRow) {
-                const qtyInput = existingRow.querySelector('.qty');
-                qtyInput.value = Number(qtyInput.value) + 1;
-                updateSummary();
-                this.value = "";
-                return;
-            }
-
-            const itemRow = document.createElement('div');
-            itemRow.className = 'cart-row';
-            itemRow.dataset.id = selectedValue;
-
-            itemRow.innerHTML ="";
-            itemRow.innerHTML = `
-            <span class="item-name">${selectedName}</span>
-            <input class="qty" type="number" name=qty_${selectedValue}" value="1" min="1">
-            <button type="button" class="trash" aria-label="Удалить">🗑️</button>`;
-
-            orderCart.appendChild(itemRow);
-
-            updateSummary();
-            this.value = "";
-    });
-
-    orderCart.addEventListener('click', (e) => {
-        e.stopPropagation();
-
-        const trashBtn = e.target.closest('.trash');
-        if (trashBtn) {
-            trashBtn.closest('.cart-row')?.remove();
-            updateSummary();
-        }
-    });
-
-    orderCart.addEventListener('input', (e) => {
-        if (e.target.classList.contains('qty')) {
-            updateSummary();
-        }
-    });
-
-    function updateSummary () {
-        const rows = orderCart.querySelectorAll('.cart-row');
-
-        const parts =[];
-        rows.forEach(row => {
-            const name = row.querySelector('.title')?.textContent?.trim() || '';
-            const qty =row.querySelector('.qty')?.value || '1';
-            if (name) parts.push(`${name} × ${qty}`);
-        });
-
-        orderSummary.value = parts.join(', ');
-    }
 
 function changeLanguage(lang) {
-    console.log ('выбран язык, lang');
-     
+    console.log ('выбран язык', lang);
     document.documentElement.lang = lang;
+     
     fetch(`${lang}.json`)
         .then(response => response.json())
         .then(data => {
             /*We take data from a file with the selected language*/
-            const currentLangData = data[lang];
+                currentTranslation = data;
             /*logotype_texts*/
             document.getElementById('logo-title').textContent = data.logo['logo-title'];
             document.getElementById('logo-text').textContent = data.logo['logo-text'];
@@ -280,35 +342,35 @@ function changeLanguage(lang) {
 
             // 1. Сначала находим ВСЕ строки корзины
 
-const cartRows = document.querySelectorAll('.cart-row');
+        const cartRows = document.querySelectorAll('.cart-row');
 
-// 2. Запускаем цикл, только если строки нашлись
+        // 2. Запускаем цикл, только если строки нашлись
         cartRows.forEach(row => {
         const productId = row.dataset.id; 
         const nameSpan = row.querySelector('.item-name'); // Проверь, что класс именно .item-name (через дефис!)
 
-    // Добавляем проверку: если в строке есть и ID, и место под имя
+        // Добавляем проверку: если в строке есть и ID, и место под имя
         if (productId && nameSpan) {
              const candle = data.candlesContainer.find(item => item.id === productId);
         if (candle) {
             nameSpan.textContent = candle.name;
         }
-    }
-});
+            }
+        });
 
 
-cartRows.forEach(row => {
-    const productId = row.dataset.id;
-    const nameSpan = row.querySelector('.item-name');
+        cartRows.forEach(row => {
+            const productId = row.dataset.id;
+            const nameSpan = row.querySelector('.item-name');
 
-    if (productId && nameSpan) {
-        const itemData = data.candlesContainer.find(item => item.id === productId);
+                if (productId && nameSpan) {
+                    const itemData = data.candlesContainer.find(item => item.id === productId);
 
-        if (itemData) {
-            nameSpan.textContent = itemData.name;
-        }
-    }
-});
+                    if (itemData) {
+                        nameSpan.textContent = itemData.name;
+                    }
+                }
+        });
 
                 
             
@@ -407,8 +469,13 @@ cartRows.forEach(row => {
                         socialsContainer.appendChild(block);
                                                 });
         localStorage.setItem('selectedLang', lang);
+        
+        
+        currentTranslation = data;
         });
-       
-    };
+        
+};
 
     changeLanguage('ru');
+
+   

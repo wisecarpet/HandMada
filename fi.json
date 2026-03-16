@@ -279,8 +279,23 @@
                     "is_active": false
                     }
                         ]           
-                }
+                },
+                "email_thank_message": 
+                {
+                "thanks_message_candles": "Kiitos, että valitsit meidät!\n Tilauksesi on vastaanotettu.\n Otamme sinuun yhteyttä pian.",
+                "best_regards": "Parhain terveisin,\n Sinun HandMadasi."
+                },
+                "email_candleOrder_message": 
+                {
+                "theme": "Kynttiläsi",
+                "hi": "Hei,",
+                "thanks_text": "Kiitos, että valitsit tuotteemme",
+                "order_title": "Tilauksesi tiedot:",
+                "regards": "Parhain terveisin,",
+                "HandMada": "Sinun HandMadasi"
+                },
+
+                "alert": "Kiitos tilauksestasi 💌",
+                "btn_process": "Lähetetään...",
+                "error": "Virhe."
 }
-
-
-
