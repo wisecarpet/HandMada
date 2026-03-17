@@ -297,5 +297,6 @@
 
                 "alert": "Thank you for your order 💌",
                 "btn_prosess": "Sending...",
+                "btn_done": "Send Request",
                 "error": "Error."
 }

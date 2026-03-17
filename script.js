@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (name) parts.push(`${name} × ${qty}`);
         });
 
-        orderSummary.value = parts.join(', ');
+        orderSummary.value = parts.join(', \n ');
     };
 
 
